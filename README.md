@@ -1,7 +1,7 @@
 # Zelda 40th Switch 2 stock watcher
 
 Watches the Zelda 40th Anniversary **console, Pro Controller and carrying case** at the
-Nintendo Store (FR, IE), Amazon EU (de/es/fr/it/nl) and Swedish shops (Webhallen, Inet,
+Nintendo Store (IE, FR, DE, AT, IT, ES, NL, BE, PT), Amazon EU (de/es/fr/it/nl) and Swedish shops (Webhallen, Inet,
 NetOnNet, Power, Elgiganten, Amazon.se). It checks in priority order: Nintendo first, then Amazon EU, then Sweden.
 
 When one comes in stock:

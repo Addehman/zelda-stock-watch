@@ -1,6 +1,6 @@
 {
   "interval_seconds": 150,
-  "parallel_tabs": 4,
+  "parallel_tabs": 6,
   "_help": "priority: 1 = most preferred (checked & grabbed first). max_price in the store's currency; anything above is treated as a reseller and ignored. Set enabled:false to skip an item. The ntfy topic is NOT stored here: it comes from the NTFY_TOPIC env var / GitHub secret, or the local .topic file.",
   "items": [
     {
@@ -47,6 +47,153 @@
       "enabled": true,
       "url": "https://store.nintendo.com/fr-fr/pochette-de-transport-edition-40e-anniversaire-de-the-legend-of-zelda-et-protection-decran-nintendo-switch2-000000000010019439",
       "max_price": 50
+    },
+    {
+      "store": "Nintendo AT",
+      "product": "Case",
+      "priority": 1,
+      "url": "https://store.nintendo.com/de-at/nintendo-switch-2-tasche-the-legend-of-zelda-edition-zum-40-jubilum-and-schutzfolie-000000000010019439",
+      "max_price": 50
+    },
+    {
+      "store": "Nintendo AT",
+      "product": "Console",
+      "priority": 1,
+      "url": "https://store.nintendo.com/de-at/nintendo-switch-2-the-legend-of-zelda-edition-zum-40-jubilum-P00211",
+      "max_price": 600
+    },
+    {
+      "store": "Nintendo AT",
+      "product": "Controller",
+      "priority": 1,
+      "url": "https://store.nintendo.com/de-at/nintendo-switch-2-pro-controller-the-legend-of-zelda-edition-zum-40-jubilum-aufsteller-000000000010019437",
+      "max_price": 125
+    },
+    {
+      "store": "Nintendo BE",
+      "product": "Case",
+      "priority": 1,
+      "url": "https://store.nintendo.com/fr-be/pochette-de-transport-edition-40e-anniversaire-de-the-legend-of-zelda-et-protection-decran-nintendo-switch2-000000000010019439",
+      "max_price": 50
+    },
+    {
+      "store": "Nintendo BE",
+      "product": "Console",
+      "priority": 1,
+      "url": "https://store.nintendo.com/fr-be/nintendo-switch-2-edition-40e-anniversaire-de-the-legend-of-zelda-P00211",
+      "max_price": 600
+    },
+    {
+      "store": "Nintendo BE",
+      "product": "Controller",
+      "priority": 1,
+      "url": "https://store.nintendo.com/fr-be/manette-pro-nintendo-switch2-edition-40e-anniversaire-de-the-legend-of-zelda-support-dexposition-000000000010019437",
+      "max_price": 125
+    },
+    {
+      "store": "Nintendo DE",
+      "product": "Case",
+      "priority": 1,
+      "url": "https://store.nintendo.com/de-de/nintendo-switch-2-tasche-the-legend-of-zelda-edition-zum-40-jubilum-and-schutzfolie-000000000010019439",
+      "max_price": 50
+    },
+    {
+      "store": "Nintendo DE",
+      "product": "Console",
+      "priority": 1,
+      "url": "https://store.nintendo.com/de-de/nintendo-switch-2-the-legend-of-zelda-edition-zum-40-jubilum-P00211",
+      "max_price": 600
+    },
+    {
+      "store": "Nintendo DE",
+      "product": "Controller",
+      "priority": 1,
+      "url": "https://store.nintendo.com/de-de/nintendo-switch-2-pro-controller-the-legend-of-zelda-edition-zum-40-jubilum-aufsteller-000000000010019437",
+      "max_price": 125
+    },
+    {
+      "store": "Nintendo ES",
+      "product": "Case",
+      "priority": 1,
+      "url": "https://store.nintendo.com/es-es/funda-edicin-40-aniversario-de-the-legend-of-zelda-y-protector-de-pantalla-de-nintendo-switch-2-000000000010019439",
+      "max_price": 50
+    },
+    {
+      "store": "Nintendo ES",
+      "product": "Console",
+      "priority": 1,
+      "url": "https://store.nintendo.com/es-es/nintendo-switch-2-edicin-40-aniversario-de-the-legend-of-zelda-P00211",
+      "max_price": 600
+    },
+    {
+      "store": "Nintendo ES",
+      "product": "Controller",
+      "priority": 1,
+      "url": "https://store.nintendo.com/es-es/mando-pro-de-nintendo-switch-2-the-legend-of-zelda-edicin-40-aniversario-soporte-expositor-000000000010019437",
+      "max_price": 125
+    },
+    {
+      "store": "Nintendo IT",
+      "product": "Case",
+      "priority": 1,
+      "url": "https://store.nintendo.com/it-it/custodia-edizione-speciale-40-anniversario-di-the-legend-of-zelda-con-pellicola-protettiva-per-nintendo-switch-2-000000000010019439",
+      "max_price": 50
+    },
+    {
+      "store": "Nintendo IT",
+      "product": "Console",
+      "priority": 1,
+      "url": "https://store.nintendo.com/it-it/nintendo-switch-2-edizione-speciale-40-anniversario-di-the-legend-of-zelda-P00211",
+      "max_price": 600
+    },
+    {
+      "store": "Nintendo IT",
+      "product": "Controller",
+      "priority": 1,
+      "url": "https://store.nintendo.com/it-it/nintendo-switch-2-pro-controller-edizione-speciale-40-anniversario-di-the-legend-of-zelda-espositore-000000000010019437",
+      "max_price": 125
+    },
+    {
+      "store": "Nintendo NL",
+      "product": "Case",
+      "priority": 1,
+      "url": "https://store.nintendo.com/nl-nl/nintendo-switch-2-etui-the-legend-of-zelda-40th-anniversary-edition-en-beschermfolie-000000000010019439",
+      "max_price": 50
+    },
+    {
+      "store": "Nintendo NL",
+      "product": "Console",
+      "priority": 1,
+      "url": "https://store.nintendo.com/nl-nl/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition-P00211",
+      "max_price": 600
+    },
+    {
+      "store": "Nintendo NL",
+      "product": "Controller",
+      "priority": 1,
+      "url": "https://store.nintendo.com/nl-nl/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition-displaystandaard-000000000010019437",
+      "max_price": 125
+    },
+    {
+      "store": "Nintendo PT",
+      "product": "Case",
+      "priority": 1,
+      "url": "https://store.nintendo.com/pt-pt/bolsa-de-transporte-edio-do-40-aniversrio-de-the-legend-of-zelda-e-protetor-de-ecr-da-nintendo-switch-2-000000000010019439",
+      "max_price": 50
+    },
+    {
+      "store": "Nintendo PT",
+      "product": "Console",
+      "priority": 1,
+      "url": "https://store.nintendo.com/pt-pt/nintendo-switch-2-edio-do-40-aniversrio-de-the-legend-of-zelda-P00211",
+      "max_price": 600
+    },
+    {
+      "store": "Nintendo PT",
+      "product": "Controller",
+      "priority": 1,
+      "url": "https://store.nintendo.com/pt-pt/comando-pro-da-nintendo-switch-2-edio-do-40-aniversrio-de-the-legend-of-zelda-expositor-000000000010019437",
+      "max_price": 125
     },
     {
       "store": "Amazon.de",
