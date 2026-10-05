@@ -8,16 +8,21 @@
       "product": "Case",
       "priority": 1,
       "url": "https://store.nintendo.com/en-ie/nintendo-switch-2-carrying-case-the-legend-of-zelda-40th-anniversary-edition-and-screen-protector-000000000010019439",
-      "max_price": 50,
-      "note": "URL guessed from the UK store's slug - verify it opens"
+      "max_price": 50
+    },
+    {
+      "store": "Nintendo IE",
+      "product": "Controller",
+      "priority": 1,
+      "max_price": 125,
+      "url": "https://store.nintendo.com/en-ie/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition-display-stand-000000000010019437"
     },
     {
       "store": "Nintendo IE",
       "product": "Console",
       "priority": 1,
       "url": "https://store.nintendo.com/en-ie/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition-P00211",
-      "max_price": 600,
-      "note": "URL guessed from the UK store's slug - verify it opens"
+      "max_price": 600
     },
     {
       "store": "Nintendo FR",
@@ -40,7 +45,7 @@
       "product": "Case",
       "priority": 1,
       "enabled": true,
-      "url": "https://store.nintendo.com/nl-be/nintendo-switch-2-etui-the-legend-of-zelda-40th-anniversary-edition-en-beschermfolie-000000000010019439",
+      "url": "https://store.nintendo.com/fr-fr/pochette-de-transport-edition-40e-anniversaire-de-the-legend-of-zelda-et-protection-decran-nintendo-switch2-000000000010019439",
       "max_price": 50
     },
     {
