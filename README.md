@@ -9,6 +9,10 @@ When one comes in stock:
 2. Your Mac opens it in the watcher's Chrome window, clicks **Add to cart** and shows the cart.
 3. A second push says "In cart". **You** finish checkout and payment.
 
+If several stores restock at once you get **one push per product**, for the best store
+(Nintendo DE → NL → BE → AT → FR → IE → IT → ES → PT → Amazon EU → Sweden), listing the others.
+A later push only comes if a *better* store gets stock.
+
 Anything priced above `max_price` (resellers) is ignored.
 
 ## Two ways it runs

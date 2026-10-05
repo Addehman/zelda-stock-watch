@@ -250,7 +250,6 @@ async def main(args):
 
         browser = await pw.chromium.launch(channel="chrome", headless=True)
         sem = asyncio.Semaphore(CONFIG.get("parallel_tabs", 4))
-        grab_lock = asyncio.Lock()
 
         async def handle(ctx, it):
             async with sem:
@@ -259,39 +258,59 @@ async def main(args):
                     status, detail = await check(page, it)
                 finally:
                     await page.close()
-            key = it["url"]
-            prev = state.get(key, {}).get("status")
+            prev = state.get(it["url"], {}).get("status")
             log(f"{status:10} p{it.get('priority', 5)} {it['store']:<16} {it['product']:<10} {detail}")
-            state[key] = {"status": status, "at": time.time(), "detail": detail}
-            if args.once:
-                return
-            if status == "IN_STOCK" and prev != "IN_STOCK" and args.ci:
-                notify(f"IN STOCK: {it['product']} @ {it['store']}",
-                       f"{detail}. Tap to open and buy now!", it["url"])
-            elif status == "IN_STOCK" and prev != "IN_STOCK":
-                notify(f"IN STOCK: {it['product']} @ {it['store']}",
-                       "Opening it and adding to cart on your Mac.", it["url"])
-                async with grab_lock:
-                    try:
-                        added = await grab(pw, it)
-                        notify(f"{'In cart' if added else 'Opened'}: {it['product']} @ {it['store']}",
-                               "Go to your Mac and finish checkout now." if added
-                               else "Couldn't auto-add - page is open, click Buy yourself.",
-                               it.get("cart_url") or it["url"], priority="high", tags="shopping_cart")
-                    except Exception as e:
-                        log(f"grab failed: {e}")
-            elif status == "BLOCKED" and prev != "BLOCKED" and not args.ci:
+            if status == "BLOCKED" and prev != "BLOCKED" and not (args.ci or args.once):
                 notify(f"Bot check at {it['store']}",
                        "Watcher can't see this store right now. Tap to check it yourself.",
                        it["url"], priority="default", tags="warning")
+            return it, status, detail, prev
+
+        def rank(it):
+            return it.get("priority", 5)
+
+        async def alert(product, results):
+            """One push per product: best-ranked store in stock, others listed."""
+            now = sorted((it for it, st, _, _ in results if st == "IN_STOCK"), key=rank)
+            before = [it for it, _, _, prev in results if prev == "IN_STOCK"]
+            if not now:
+                return
+            best = now[0]
+            prev_best = min(before, key=rank) if before else None
+            if prev_best is not None and (best["url"] in {i["url"] for i in before}
+                                          or rank(best) >= rank(prev_best)):
+                return  # already alerted for this or a better store
+            others = ", ".join(i["store"] for i in now[1:6])
+            more = f" +{len(now) - 6} more" if len(now) > 6 else ""
+            also = f" Also in stock at: {others}{more}." if others else ""
+            upgrade = "Better store now in stock! " if prev_best else ""
+            if args.ci:
+                notify(f"IN STOCK: {product} @ {best['store']}",
+                       f"{upgrade}Tap to open and buy now!{also}", best["url"])
+                return
+            notify(f"IN STOCK: {product} @ {best['store']}",
+                   f"{upgrade}Opening it and adding to cart on your Mac.{also}", best["url"])
+            try:
+                added = await grab(pw, best)
+                notify(f"{'In cart' if added else 'Opened'}: {product} @ {best['store']}",
+                       "Go to your Mac and finish checkout now." if added
+                       else "Couldn't auto-add - page is open, click Buy yourself.",
+                       best.get("cart_url") or best["url"], priority="high", tags="shopping_cart")
+            except Exception as e:
+                log(f"grab failed: {e}")
 
         while True:
             ctx = await browser.new_context(locale="en-GB", viewport={"width": 1366, "height": 900})
-            # lower "priority" = preferred store (Nintendo Store = 1); started first
-            items.sort(key=lambda i: (i.get("priority", 5), random.random()))
-            await asyncio.gather(*(handle(ctx, it) for it in items))
-            STATE_FILE.write_text(json.dumps(state, indent=1))
+            # lower "priority" = preferred store (Nintendo DE = 1.0); started first
+            items.sort(key=lambda i: (rank(i), random.random()))
+            results = await asyncio.gather(*(handle(ctx, it) for it in items))
             await ctx.close()
+            if not args.once:
+                for product in dict.fromkeys(it["product"] for it in items):
+                    await alert(product, [r for r in results if r[0]["product"] == product])
+            for it, status, detail, _ in results:
+                state[it["url"]] = {"status": status, "at": time.time(), "detail": detail}
+            STATE_FILE.write_text(json.dumps(state, indent=1))
             if args.once or args.ci:
                 return
             await asyncio.sleep(interval * random.uniform(0.8, 1.2))
