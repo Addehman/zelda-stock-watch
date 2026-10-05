@@ -1,0 +1,316 @@
+{
+  "interval_seconds": 150,
+  "parallel_tabs": 4,
+  "_help": "priority: 1 = most preferred (checked & grabbed first). max_price in the store's currency; anything above is treated as a reseller and ignored. Set enabled:false to skip an item. The ntfy topic is NOT stored here: it comes from the NTFY_TOPIC env var / GitHub secret, or the local .topic file.",
+  "items": [
+    {
+      "store": "Nintendo IE",
+      "product": "Case",
+      "priority": 1,
+      "url": "https://store.nintendo.com/en-ie/nintendo-switch-2-carrying-case-the-legend-of-zelda-40th-anniversary-edition-and-screen-protector-000000000010019439",
+      "max_price": 50,
+      "note": "URL guessed from the UK store's slug - verify it opens"
+    },
+    {
+      "store": "Nintendo IE",
+      "product": "Console",
+      "priority": 1,
+      "url": "https://store.nintendo.com/en-ie/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition-P00211",
+      "max_price": 600,
+      "note": "URL guessed from the UK store's slug - verify it opens"
+    },
+    {
+      "store": "Nintendo FR",
+      "product": "Console",
+      "priority": 1,
+      "enabled": true,
+      "url": "https://store.nintendo.com/fr-fr/nintendo-switch-2-edition-40e-anniversaire-de-the-legend-of-zelda-P00211",
+      "max_price": 600
+    },
+    {
+      "store": "Nintendo FR",
+      "product": "Controller",
+      "priority": 1,
+      "enabled": true,
+      "url": "https://store.nintendo.com/fr-fr/manette-pro-nintendo-switch2-edition-40e-anniversaire-de-the-legend-of-zelda-support-dexposition-000000000010019437",
+      "max_price": 125
+    },
+    {
+      "store": "Nintendo FR",
+      "product": "Case",
+      "priority": 1,
+      "enabled": true,
+      "url": "https://store.nintendo.com/nl-be/nintendo-switch-2-etui-the-legend-of-zelda-40th-anniversary-edition-en-beschermfolie-000000000010019439",
+      "max_price": 50
+    },
+    {
+      "store": "Amazon.de",
+      "product": "Console",
+      "priority": 2,
+      "url": "https://www.amazon.de/dp/B0F2TN43GH",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.de/gp/cart/view.html",
+      "max_price": 600
+    },
+    {
+      "store": "Amazon.de",
+      "product": "Controller",
+      "priority": 2,
+      "url": "https://www.amazon.de/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.de/gp/cart/view.html",
+      "max_price": 125
+    },
+    {
+      "store": "Amazon.de",
+      "product": "Case",
+      "priority": 2,
+      "url": "https://www.amazon.de/dp/B0HJ89X1VQ",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.de/gp/cart/view.html",
+      "max_price": 50
+    },
+    {
+      "store": "Amazon.es",
+      "product": "Console",
+      "priority": 2,
+      "url": "https://www.amazon.es/dp/B0F2TN43GH",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.es/gp/cart/view.html",
+      "max_price": 600
+    },
+    {
+      "store": "Amazon.es",
+      "product": "Controller",
+      "priority": 2,
+      "url": "https://www.amazon.es/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.es/gp/cart/view.html",
+      "max_price": 125
+    },
+    {
+      "store": "Amazon.es",
+      "product": "Case",
+      "priority": 2,
+      "url": "https://www.amazon.es/dp/B0HJ89X1VQ",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.es/gp/cart/view.html",
+      "max_price": 50
+    },
+    {
+      "store": "Amazon.fr",
+      "product": "Console",
+      "priority": 2,
+      "url": "https://www.amazon.fr/dp/B0F2TN43GH",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.fr/gp/cart/view.html",
+      "max_price": 600
+    },
+    {
+      "store": "Amazon.fr",
+      "product": "Controller",
+      "priority": 2,
+      "url": "https://www.amazon.fr/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.fr/gp/cart/view.html",
+      "max_price": 125
+    },
+    {
+      "store": "Amazon.fr",
+      "product": "Case",
+      "priority": 2,
+      "url": "https://www.amazon.fr/dp/B0HJ89X1VQ",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.fr/gp/cart/view.html",
+      "max_price": 50
+    },
+    {
+      "store": "Amazon.it",
+      "product": "Console",
+      "priority": 2,
+      "url": "https://www.amazon.it/dp/B0F2TN43GH",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.it/gp/cart/view.html",
+      "max_price": 600
+    },
+    {
+      "store": "Amazon.it",
+      "product": "Controller",
+      "priority": 2,
+      "url": "https://www.amazon.it/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.it/gp/cart/view.html",
+      "max_price": 125
+    },
+    {
+      "store": "Amazon.it",
+      "product": "Case",
+      "priority": 2,
+      "url": "https://www.amazon.it/dp/B0HJ89X1VQ",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.it/gp/cart/view.html",
+      "max_price": 50
+    },
+    {
+      "store": "Amazon.nl",
+      "product": "Console",
+      "priority": 2,
+      "url": "https://www.amazon.nl/dp/B0F2TN43GH",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.nl/gp/cart/view.html",
+      "max_price": 600
+    },
+    {
+      "store": "Amazon.nl",
+      "product": "Controller",
+      "priority": 2,
+      "url": "https://www.amazon.nl/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.nl/gp/cart/view.html",
+      "max_price": 125
+    },
+    {
+      "store": "Amazon.nl",
+      "product": "Case",
+      "priority": 2,
+      "url": "https://www.amazon.nl/dp/B0HJ89X1VQ",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.nl/gp/cart/view.html",
+      "max_price": 50
+    },
+    {
+      "store": "Amazon.se",
+      "product": "Case",
+      "priority": 3,
+      "url": "https://www.amazon.se/dp/B0HJ89X1VQ",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.se/gp/cart/view.html",
+      "max_price": 550
+    },
+    {
+      "store": "Webhallen",
+      "product": "Console",
+      "priority": 3,
+      "url": "https://www.webhallen.com/se/product/401807-Nintendo-Switch-2-The-Legend-of-Zelda-40th-Anniversary-Edition",
+      "max_price": 7700,
+      "type": "webhallen"
+    },
+    {
+      "store": "Webhallen",
+      "product": "Controller",
+      "priority": 3,
+      "url": "https://www.webhallen.com/se/product/401808-Nintendo-Switch-2-Pro-Controller-The-Legend-of-Zelda-40th-Anniversary-Edition",
+      "max_price": 1450,
+      "type": "webhallen"
+    },
+    {
+      "store": "Webhallen",
+      "product": "Case",
+      "priority": 3,
+      "url": "https://www.webhallen.com/se/product/401806-Nintendo-Switch-2-Carrying-Case-The-Legend-of-Zelda-40th-AE",
+      "max_price": 550,
+      "type": "webhallen"
+    },
+    {
+      "store": "Inet",
+      "product": "Console",
+      "priority": 3,
+      "url": "https://www.inet.se/produkt/6613315/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition",
+      "max_price": 7700,
+      "cart_url": "https://www.inet.se/kundvagn",
+      "enabled": false,
+      "note": "Blocks automated browsers - use the store's own 'Bevaka' email alert instead"
+    },
+    {
+      "store": "Inet",
+      "product": "Controller",
+      "priority": 3,
+      "url": "https://www.inet.se/produkt/6613316/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition",
+      "max_price": 1450,
+      "cart_url": "https://www.inet.se/kundvagn",
+      "enabled": false,
+      "note": "Blocks automated browsers - use the store's own 'Bevaka' email alert instead"
+    },
+    {
+      "store": "Inet",
+      "product": "Case",
+      "priority": 3,
+      "url": "https://www.inet.se/produkt/6613317/nintendo-switch-2-carrying-case-the-legend-of-zelda-40th-anniversary-edition",
+      "max_price": 550,
+      "cart_url": "https://www.inet.se/kundvagn",
+      "enabled": false,
+      "note": "Blocks automated browsers - use the store's own 'Bevaka' email alert instead"
+    },
+    {
+      "store": "NetOnNet",
+      "product": "Console",
+      "priority": 3,
+      "url": "https://www.netonnet.se/art/gaming/spel-och-konsol/nintendo/nintendo-konsol/nintendo-nintendo-switch-2-zelda-edition/1067847.14414/",
+      "max_price": 7700,
+      "enabled": false,
+      "note": "Blocks automated browsers - use the store's own 'Bevaka' email alert instead"
+    },
+    {
+      "store": "NetOnNet",
+      "product": "Controller",
+      "priority": 3,
+      "url": "https://www.netonnet.se/art/gaming/spel-och-konsol/nintendo/nintendo-ns-2-pro-controller-zelda-oot/1067845.14405/",
+      "max_price": 1450,
+      "enabled": false,
+      "note": "Blocks automated browsers - use the store's own 'Bevaka' email alert instead"
+    },
+    {
+      "store": "NetOnNet",
+      "product": "Case",
+      "priority": 3,
+      "url": "https://www.netonnet.se/art/gaming/spel-och-konsol/nintendo/nintendo-ns-2-carrying-case-zelda-oot/1067844.14405/",
+      "max_price": 550,
+      "enabled": false,
+      "note": "Blocks automated browsers - use the store's own 'Bevaka' email alert instead"
+    },
+    {
+      "store": "Power",
+      "product": "Console",
+      "priority": 3,
+      "url": "https://www.power.se/gaming/nintendo/nintendo-konsoler/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition-barbar-spelkonsol/p-4531714/",
+      "max_price": 7700
+    },
+    {
+      "store": "Power",
+      "product": "Controller",
+      "priority": 3,
+      "url": "https://www.power.se/gaming/nintendo/nintendo-kontroller/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition-gamingkontroll-svartgronguld/p-4531716/",
+      "max_price": 1450
+    },
+    {
+      "store": "Elgiganten",
+      "product": "Console",
+      "priority": 3,
+      "url": "https://www.elgiganten.se/product/gaming/spelkonsoler-tillbehor/nintendo-switch/nintendo-konsol/nintendo-switch-2-the-legend-of-zelda-40thanniversary-edition/1141845",
+      "max_price": 7700
+    },
+    {
+      "store": "Elgiganten",
+      "product": "Controller",
+      "priority": 3,
+      "url": "https://www.elgiganten.se/product/gaming/spelkonsoler-tillbehor/nintendo-switch/nintendo-tillbehor/nintendo-switch-2-pro-handkontroll-the-legend-of-zelda-40th-anniversary/1141843",
+      "max_price": 1450
+    }
+  ]
+}
