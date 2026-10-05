@@ -372,6 +372,57 @@
       "priority": 3,
       "url": "https://www.elgiganten.se/product/gaming/spelkonsoler-tillbehor/nintendo-switch/nintendo-konsol/nintendo-switch-2-the-legend-of-zelda-40thanniversary-edition/1141845",
       "max_price": 7700
+    },
+    {
+      "store": "Arcade Dreams",
+      "product": "Console",
+      "priority": 3.5,
+      "url": "https://arcadedreams.se/shop/forbokningar/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition",
+      "max_price": 7700
+    },
+    {
+      "store": "Arcade Dreams",
+      "product": "Case",
+      "priority": 3.5,
+      "url": "https://arcadedreams.se/shop/forbokningar/nintendo-switch-2-carrying-case-screen-protector-the-legend-of-zelda-40th-anniversary-edition",
+      "max_price": 550
+    },
+    {
+      "store": "GameShop",
+      "product": "Console",
+      "priority": 3.5,
+      "url": "https://gameshop.se/product/spel/nintendo-switch-2/hardvara-nintendo-switch-2/1588806/nintendo-switch-2-the-legend-of-zelda-ocarina-of-time-edition/",
+      "max_price": 7700
+    },
+    {
+      "store": "GameShop",
+      "product": "Case",
+      "priority": 3.5,
+      "url": "https://gameshop.se/product/spel/nintendo-switch-2/hardvara-nintendo-switch-2/1589272/nintendo-switch-2-carrying-case-the-legend-of-zelda-40th-anniversary-edition-screen-protector/",
+      "max_price": 550
+    },
+    {
+      "store": "Retrospelbutiken",
+      "product": "Console",
+      "priority": 3.5,
+      "url": "https://www.retrospelbutiken.se/store/produkt.php?produkt=56241",
+      "max_price": 7700,
+      "sold_out_text": "kommande|bli informerad|slutsåld|ej i lager"
+    },
+    {
+      "store": "Retrospelbutiken",
+      "product": "Case",
+      "priority": 3.5,
+      "url": "https://www.retrospelbutiken.se/store/produkt.php?produkt=56240",
+      "max_price": 550,
+      "sold_out_text": "kommande|bli informerad|slutsåld|ej i lager"
+    },
+    {
+      "store": "Proshop",
+      "product": "Case",
+      "priority": 3.5,
+      "url": "https://www.proshop.se/Spel-Tillbehoer/Nintendo-Switch-2-Carrying-Case-The-Legend-of-Zelda-40th-Anniversary-Edition-Skydd-Nintendo-Switch-2/3510678",
+      "max_price": 550
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 Watches the Zelda 40th Anniversary **console, Pro Controller and carrying case** at the
 Nintendo Store (IE, FR, DE, AT, IT, ES, NL, BE, PT), Amazon EU (de/es/fr/it/nl) and Swedish shops (Webhallen, Inet,
-NetOnNet, Power, Elgiganten, Amazon.se). It checks in priority order: Nintendo first, then Amazon EU, then Sweden.
+NetOnNet, Power, Elgiganten, Amazon.se, Arcade Dreams, GameShop, Retrospelbutiken, Proshop). It checks in priority order: Nintendo first, then Amazon EU, then Sweden.
 
 When one comes in stock:
 1. **Urgent push to your Android** via ntfy. Tap it to open the product.
