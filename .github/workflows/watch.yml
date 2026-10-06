@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # pinned: ubuntu-latest moves to 26 on 2026-10-19
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
       - name: Check stores
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: python watch.py --ci   # Google Chrome is preinstalled on ubuntu-latest
+        run: python watch.py --ci   # Google Chrome is preinstalled on the runner
 
       - uses: actions/cache/save@v4
         if: always()
