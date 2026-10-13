@@ -271,7 +271,10 @@ async def main(args):
                     await page.close()
             prev = state.get(it["url"], {}).get("status")
             log(f"{status:10} p{it.get('priority', 5)} {it['store']:<16} {it['product']:<10} {detail}")
-            if status == "BLOCKED" and prev != "BLOCKED" and not (args.ci or args.once):
+            blocked = state.setdefault("_blocked_push", {})
+            if status == "BLOCKED" and not (args.ci or args.once) \
+                    and time.time() - blocked.get(it["store"], 0) > 86400:  # max once/day/store
+                blocked[it["store"]] = time.time()
                 notify(f"Bot check at {it['store']}",
                        "Watcher can't see this store right now. Tap to check it yourself.",
                        it["url"], priority="default", tags="warning")
