@@ -3,3 +3,4 @@ __pycache__/
 chrome-profile/
 state.json
 .topic
+watch.log
