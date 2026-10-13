@@ -367,6 +367,13 @@
       "max_price": 7700
     },
     {
+      "store": "Power",
+      "product": "Case",
+      "priority": 3,
+      "url": "https://www.power.se/product/p-4531718/",
+      "max_price": 550
+    },
+    {
       "store": "Elgiganten",
       "product": "Console",
       "priority": 3,
