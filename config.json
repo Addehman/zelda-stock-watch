@@ -432,6 +432,26 @@
       "max_price": 550,
       "enabled": false,
       "note": "Blocks automated browsers (CAPTCHA locally, blank page from GitHub) - check by hand"
+    },
+    {
+      "store": "Spel & Sånt",
+      "product": "Console",
+      "priority": 3.5,
+      "url": "https://www.spelochsant.se/produkt/nintendoswitch2/konsol/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition?set_language=sv",
+      "max_price": 7700,
+      "status_regex": "^\\d[\\d\\s ]*\\s?Kr\\s*\\n\\s*([^\\n]+)",
+      "out_regex": "fullbokad|slutsåld|tillfälligt slut|ej i lager|bevaka|kommande|fully booked|sold out|out of stock|coming soon|notify",
+      "note": "JSON-LD always says InStock; uses the status line under the price"
+    },
+    {
+      "store": "Spel & Sånt",
+      "product": "Case",
+      "priority": 3.5,
+      "url": "https://www.spelochsant.se/produkt/nintendoswitch2/tillbehor/vaskorskydd/nintendoswitch2carryingcasescreenprotectorthelegendofzelda40thanniversaryedition?set_language=sv",
+      "max_price": 550,
+      "status_regex": "^\\d[\\d\\s ]*\\s?Kr\\s*\\n\\s*([^\\n]+)",
+      "out_regex": "fullbokad|slutsåld|tillfälligt slut|ej i lager|bevaka|kommande|fully booked|sold out|out of stock|coming soon|notify",
+      "note": "JSON-LD always says InStock; uses the status line under the price"
     }
   ]
 }

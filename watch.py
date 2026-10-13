@@ -186,6 +186,17 @@ async def check(page, item):
             return "BLOCKED", "empty page (likely bot protection)"
         if BLOCKED.search(body) or BLOCKED.search(await page.title()):
             return "BLOCKED", "bot check / captcha"
+        if item.get("status_regex"):
+            # stores whose JSON-LD lies: read only the product's own status line
+            m = re.search(item["status_regex"], body, re.I | re.M)
+            if not m:
+                return "ERROR", "status line not found (page layout changed?)"
+            line = m.group(1).strip()
+            if re.search(item.get("out_regex", SOLD_OUT.pattern), line, re.I):
+                return "OUT", f"status '{line}'"
+            price = await page_price(page, item)
+            bad = price_check(item, price)
+            return ("OVERPRICED", bad) if bad else ("IN_STOCK", f"status '{line}' price={price}")
         ld = await ld_availability(page)
         ld_ok = any(any(a in v for a in AVAILABLE_LD) for v in ld)
         btn = await find_buy_button(page, item)
