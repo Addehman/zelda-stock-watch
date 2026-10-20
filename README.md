@@ -1,8 +1,9 @@
 # Zelda 40th Switch 2 stock watcher
 
-Watches the Zelda 40th Anniversary **Pro Controller + display stand** and **console** on the
-Nintendo Store (DE, NL, BE, AT, FR, IE, IT, ES, PT). Case and console are already bought elsewhere,
-so other shops were removed (see git history to bring them back).
+Watches the Zelda 40th Anniversary **Pro Controller + display stand** on the Nintendo Store
+(DE, NL, BE, AT, FR, IE, IT, ES, PT), and the **console** there plus Amazon EU (de/nl/fr/it/es)
+and Swedish shops (Webhallen, Power, Elgiganten, Arcade Dreams, GameShop, Retrospelbutiken, Spel & Sånt).
+The case is no longer watched.
 
 When one comes in stock:
 1. **Urgent push to your Android** via ntfy. Tap it to open the product.
@@ -10,7 +11,7 @@ When one comes in stock:
 3. A second push says "In cart". **You** finish checkout and payment.
 
 If several stores restock at once you get **one push per product**, for the best store
-(Nintendo DE → NL → BE → AT → FR → IE → IT → ES → PT), listing the others.
+(Nintendo DE → NL → BE → AT → FR → IE → IT → ES → PT → Amazon EU → Sweden), listing the others.
 A later push only comes if a *better* store gets stock.
 
 Anything priced above `max_price` (resellers) is ignored.

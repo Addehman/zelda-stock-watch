@@ -146,6 +146,129 @@
       "url": "https://store.nintendo.com/pt-pt/comando-pro-da-nintendo-switch-2-edio-do-40-aniversrio-de-the-legend-of-zelda-expositor-000000000010019437",
       "max_price": 125,
       "enabled": true
+    },
+    {
+      "store": "Amazon.de",
+      "product": "Console",
+      "priority": 2.0,
+      "url": "https://www.amazon.de/dp/B0F2TN43GH",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.de/gp/cart/view.html",
+      "max_price": 600
+    },
+    {
+      "store": "Amazon.es",
+      "product": "Console",
+      "priority": 2.4,
+      "url": "https://www.amazon.es/dp/B0F2TN43GH",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.es/gp/cart/view.html",
+      "max_price": 600
+    },
+    {
+      "store": "Amazon.fr",
+      "product": "Console",
+      "priority": 2.2,
+      "url": "https://www.amazon.fr/dp/B0F2TN43GH",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.fr/gp/cart/view.html",
+      "max_price": 600
+    },
+    {
+      "store": "Amazon.it",
+      "product": "Console",
+      "priority": 2.3,
+      "url": "https://www.amazon.it/dp/B0F2TN43GH",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.it/gp/cart/view.html",
+      "max_price": 600
+    },
+    {
+      "store": "Amazon.nl",
+      "product": "Console",
+      "priority": 2.1,
+      "url": "https://www.amazon.nl/dp/B0F2TN43GH",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.nl/gp/cart/view.html",
+      "max_price": 600
+    },
+    {
+      "store": "Webhallen",
+      "product": "Console",
+      "priority": 3,
+      "url": "https://www.webhallen.com/se/product/401807-Nintendo-Switch-2-The-Legend-of-Zelda-40th-Anniversary-Edition",
+      "max_price": 7700,
+      "type": "webhallen"
+    },
+    {
+      "store": "Inet",
+      "product": "Console",
+      "priority": 3,
+      "url": "https://www.inet.se/produkt/6613315/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition",
+      "max_price": 7700,
+      "cart_url": "https://www.inet.se/kundvagn",
+      "enabled": false,
+      "note": "Blocks automated browsers - use the store's own 'Bevaka' email alert instead"
+    },
+    {
+      "store": "NetOnNet",
+      "product": "Console",
+      "priority": 3,
+      "url": "https://www.netonnet.se/art/gaming/spel-och-konsol/nintendo/nintendo-konsol/nintendo-nintendo-switch-2-zelda-edition/1067847.14414/",
+      "max_price": 7700,
+      "enabled": false,
+      "note": "Blocks automated browsers - use the store's own 'Bevaka' email alert instead"
+    },
+    {
+      "store": "Power",
+      "product": "Console",
+      "priority": 3,
+      "url": "https://www.power.se/gaming/nintendo/nintendo-konsoler/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition-barbar-spelkonsol/p-4531714/",
+      "max_price": 7700
+    },
+    {
+      "store": "Elgiganten",
+      "product": "Console",
+      "priority": 3,
+      "url": "https://www.elgiganten.se/product/gaming/spelkonsoler-tillbehor/nintendo-switch/nintendo-konsol/nintendo-switch-2-the-legend-of-zelda-40thanniversary-edition/1141845",
+      "max_price": 7700
+    },
+    {
+      "store": "Arcade Dreams",
+      "product": "Console",
+      "priority": 3.5,
+      "url": "https://arcadedreams.se/shop/forbokningar/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition",
+      "max_price": 7700
+    },
+    {
+      "store": "GameShop",
+      "product": "Console",
+      "priority": 3.5,
+      "url": "https://gameshop.se/product/spel/nintendo-switch-2/hardvara-nintendo-switch-2/1588806/nintendo-switch-2-the-legend-of-zelda-ocarina-of-time-edition/",
+      "max_price": 7700
+    },
+    {
+      "store": "Retrospelbutiken",
+      "product": "Console",
+      "priority": 3.5,
+      "url": "https://www.retrospelbutiken.se/store/produkt.php?produkt=56241",
+      "max_price": 7700,
+      "sold_out_text": "kommande|bli informerad|slutsåld|ej i lager"
+    },
+    {
+      "store": "Spel & Sånt",
+      "product": "Console",
+      "priority": 3.5,
+      "url": "https://www.spelochsant.se/produkt/nintendoswitch2/konsol/nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition?set_language=sv",
+      "max_price": 7700,
+      "status_regex": "^\\d[\\d\\s ]*\\s?Kr\\s*\\n\\s*([^\\n]+)",
+      "out_regex": "fullbokad|slutsåld|tillfälligt slut|ej i lager|bevaka|kommande|fully booked|sold out|out of stock|coming soon|notify",
+      "note": "JSON-LD always says InStock; uses the status line under the price"
     }
   ]
 }
