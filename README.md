@@ -1,8 +1,7 @@
 # Zelda 40th Switch 2 stock watcher
 
 Watches the Zelda 40th Anniversary **Pro Controller + display stand** on the Nintendo Store
-(DE, NL, BE, AT, FR, IE, IT, ES, PT), and the **console** there plus Amazon EU (de/nl/fr/it/es)
-and Swedish shops (Webhallen, Power, Elgiganten, Arcade Dreams, GameShop, Retrospelbutiken, Spel & Sånt).
+(DE, NL, BE, AT, FR, IE, IT, ES, PT).
 
 When one comes in stock:
 1. **Urgent push to your Android** via ntfy. Tap it to open the product.
