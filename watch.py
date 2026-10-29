@@ -139,11 +139,19 @@ def parse_price(text):
         return None
 
 
+SEK_PER_EUR = 11  # rough; only used to compare a kronor price with a euro max_price
+
+
 async def page_price(page, item):
     if item.get("price_selector"):
         loc = page.locator(item["price_selector"]).first
         if await loc.count():
-            return parse_price(await loc.text_content(timeout=2000))
+            text = await loc.text_content(timeout=2000)
+            price = parse_price(text)
+            # Amazon EU shows kronor to Swedish visitors; max_price there is in euros
+            if price and ".se/" not in item["url"] and re.search(r"\bkr\b|SEK", text or "", re.I):
+                price = round(price / SEK_PER_EUR, 2)
+            return price
     for raw in await page.locator('script[type="application/ld+json"]').all_inner_texts():
         m = re.search(r'"price"\s*:\s*"?([\d.]+)', raw)
         if m:
