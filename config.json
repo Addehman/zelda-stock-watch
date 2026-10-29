@@ -74,6 +74,98 @@
       "url": "https://store.nintendo.com/pt-pt/comando-pro-da-nintendo-switch-2-edio-do-40-aniversrio-de-the-legend-of-zelda-expositor-000000000010019437",
       "max_price": 125,
       "enabled": true
+    },
+    {
+      "store": "Amazon.de",
+      "product": "Controller",
+      "priority": 2.0,
+      "url": "https://www.amazon.de/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.de/gp/cart/view.html",
+      "max_price": 125
+    },
+    {
+      "store": "Amazon.nl",
+      "product": "Controller",
+      "priority": 2.1,
+      "url": "https://www.amazon.nl/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.nl/gp/cart/view.html",
+      "max_price": 125
+    },
+    {
+      "store": "Amazon.fr",
+      "product": "Controller",
+      "priority": 2.2,
+      "url": "https://www.amazon.fr/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.fr/gp/cart/view.html",
+      "max_price": 125
+    },
+    {
+      "store": "Amazon.it",
+      "product": "Controller",
+      "priority": 2.3,
+      "url": "https://www.amazon.it/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.it/gp/cart/view.html",
+      "max_price": 125
+    },
+    {
+      "store": "Amazon.es",
+      "product": "Controller",
+      "priority": 2.4,
+      "url": "https://www.amazon.es/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.es/gp/cart/view.html",
+      "max_price": 125
+    },
+    {
+      "store": "Webhallen",
+      "product": "Controller",
+      "priority": 3,
+      "url": "https://www.webhallen.com/se/product/401808-Nintendo-Switch-2-Pro-Controller-The-Legend-of-Zelda-40th-Anniversary-Edition",
+      "max_price": 1450,
+      "type": "webhallen"
+    },
+    {
+      "store": "Power",
+      "product": "Controller",
+      "priority": 3,
+      "url": "https://www.power.se/gaming/nintendo/nintendo-kontroller/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition-gamingkontroll-svartgronguld/p-4531716/",
+      "max_price": 1450
+    },
+    {
+      "store": "Amazon.se",
+      "product": "Controller",
+      "priority": 3,
+      "url": "https://www.amazon.se/dp/B0F2T6WM33",
+      "buy_selector": "#add-to-cart-button",
+      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
+      "cart_url": "https://www.amazon.se/gp/cart/view.html",
+      "max_price": 1450
+    },
+    {
+      "store": "Arcade Dreams",
+      "product": "Controller",
+      "priority": 3.5,
+      "url": "https://arcadedreams.se/shop/nintendo-switch-2/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition",
+      "max_price": 1450
+    },
+    {
+      "store": "Spel & Sånt",
+      "product": "Controller",
+      "priority": 3.5,
+      "url": "https://www.spelochsant.se/produkt/nintendoswitch2/tillbehor/handkontroller/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition?set_language=sv",
+      "max_price": 1450,
+      "status_regex": "^\\d[\\d\\s ]*\\s?Kr\\s*\\n\\s*([^\\n]+)",
+      "out_regex": "fullbokad|slutsåld|tillfälligt slut|ej i lager|bevaka|kommande|fully booked|sold out|out of stock|coming soon|notify",
+      "note": "JSON-LD always says InStock; uses the status line under the price"
     }
   ]
 }
