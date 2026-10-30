@@ -1,5 +1,5 @@
 {
-  "interval_seconds": 150,
+  "interval_seconds": 60,
   "parallel_tabs": 6,
   "_help": "priority: lower = more preferred (roughly shipping distance to Sweden) (checked & grabbed first). max_price in the store's currency; anything above is treated as a reseller and ignored. Set enabled:false to skip an item. The ntfy topic is NOT stored here: it comes from the NTFY_TOPIC env var / GitHub secret, or the local .topic file.",
   "items": [

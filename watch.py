@@ -260,6 +260,7 @@ async def main(args):
     state = json.loads(STATE_FILE.read_text()) if STATE_FILE.exists() else {}
     items = [i for i in CONFIG["items"] if i.get("enabled", True)]
     interval = CONFIG.get("interval_seconds", 120)
+    stop_at = time.time() + args.keep_going
     async with async_playwright() as pw:
         if args.login:
             ctx = await pw.chromium.launch_persistent_context(
@@ -340,9 +341,10 @@ async def main(args):
             for it, status, detail, _ in results:
                 state[it["url"]] = {"status": status, "at": time.time(), "detail": detail}
             STATE_FILE.write_text(json.dumps(state, indent=1))
-            if args.once or args.ci:
+            pause = interval * random.uniform(0.8, 1.2)
+            if args.once or (args.ci and time.time() + pause > stop_at):
                 return
-            await asyncio.sleep(interval * random.uniform(0.8, 1.2))
+            await asyncio.sleep(pause)
 
 
 if __name__ == "__main__":
@@ -351,6 +353,8 @@ if __name__ == "__main__":
     ap.add_argument("--once", action="store_true")
     ap.add_argument("--test-notify", action="store_true")
     ap.add_argument("--ci", action="store_true", help="single pass, push alerts only (GitHub Actions)")
+    ap.add_argument("--keep-going", type=int, default=0, metavar="SECONDS",
+                    help="with --ci: keep checking every interval for this long instead of one pass")
     a = ap.parse_args()
     if a.test_notify:
         notify("Zelda watcher test", "If you see this on your phone, alerts work.",

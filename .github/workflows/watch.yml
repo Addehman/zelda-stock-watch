@@ -34,7 +34,8 @@ jobs:
       - name: Check stores
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: python watch.py --ci   # Google Chrome is preinstalled on the runner
+        # check every ~minute for ~4.5 min; the next trigger (every 5 min) waits in the queue
+        run: python watch.py --ci --keep-going 260   # Google Chrome is preinstalled on the runner
 
       - uses: actions/cache/save@v4
         if: always()
