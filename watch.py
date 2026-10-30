@@ -64,7 +64,8 @@ def log(msg):
     print(f"{datetime.now():%H:%M:%S} {msg}", flush=True)
 
 
-def notify(title, body, url=None, priority="urgent", tags="rotating_light,video_game"):
+def notify(title, body, url=None, priority="urgent", tags="rotating_light,video_game", actions=None):
+    """url: where tapping the push goes. actions: [(label, url)] buttons, default one "Open store"."""
     topic = TOPIC
     if not topic:
         log("no NTFY_TOPIC set - skipping push"); return
@@ -72,7 +73,9 @@ def notify(title, body, url=None, priority="urgent", tags="rotating_light,video_
         f"https://ntfy.sh/{topic}", data=body.encode(), method="POST",
         headers={"Title": title.encode("utf-8").decode("latin-1", "ignore"),
                  "Priority": priority, "Tags": tags,
-                 **({"Click": url, "Actions": f"view, Open store, {url}"} if url else {})})
+                 **({"Click": url} if url else {}),
+                 **({"Actions": "; ".join(f"view, {label}, {u}" for label, u in actions or [("Open store", url)])}
+                    if url else {})})
     try:
         urllib.request.urlopen(req, timeout=10)
     except Exception as e:
@@ -319,7 +322,9 @@ async def main(args):
                 notify(f"{'In cart' if added else 'Opened'}: {product} @ {best['store']}",
                        "Go to your Mac and finish checkout now." if added
                        else "Couldn't auto-add - page is open, click Buy yourself.",
-                       best.get("cart_url") or best["url"], priority="high", tags="shopping_cart")
+                       best.get("cart_url") or best["url"], priority="high", tags="shopping_cart",
+                       actions=[("Open product", best["url"])]
+                       + ([("Open cart", best["cart_url"])] if best.get("cart_url") else []))
             except Exception as e:
                 log(f"grab failed: {e}")
 
