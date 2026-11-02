@@ -140,106 +140,6 @@
       "max_price": 50
     },
     {
-      "store": "Amazon.de",
-      "product": "Controller",
-      "priority": 2.0,
-      "url": "https://www.amazon.de/dp/B0F2T6WM33",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.de/gp/cart/view.html",
-      "max_price": 125
-    },
-    {
-      "store": "Amazon.de",
-      "product": "Case",
-      "priority": 2.0,
-      "url": "https://www.amazon.de/dp/B0HJ89X1VQ",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.de/gp/cart/view.html",
-      "max_price": 50
-    },
-    {
-      "store": "Amazon.nl",
-      "product": "Controller",
-      "priority": 2.1,
-      "url": "https://www.amazon.nl/dp/B0F2T6WM33",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.nl/gp/cart/view.html",
-      "max_price": 125
-    },
-    {
-      "store": "Amazon.nl",
-      "product": "Case",
-      "priority": 2.1,
-      "url": "https://www.amazon.nl/dp/B0HJ89X1VQ",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.nl/gp/cart/view.html",
-      "max_price": 50
-    },
-    {
-      "store": "Amazon.fr",
-      "product": "Controller",
-      "priority": 2.2,
-      "url": "https://www.amazon.fr/dp/B0F2T6WM33",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.fr/gp/cart/view.html",
-      "max_price": 125
-    },
-    {
-      "store": "Amazon.fr",
-      "product": "Case",
-      "priority": 2.2,
-      "url": "https://www.amazon.fr/dp/B0HJ89X1VQ",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.fr/gp/cart/view.html",
-      "max_price": 50
-    },
-    {
-      "store": "Amazon.it",
-      "product": "Controller",
-      "priority": 2.3,
-      "url": "https://www.amazon.it/dp/B0F2T6WM33",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.it/gp/cart/view.html",
-      "max_price": 125
-    },
-    {
-      "store": "Amazon.it",
-      "product": "Case",
-      "priority": 2.3,
-      "url": "https://www.amazon.it/dp/B0HJ89X1VQ",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.it/gp/cart/view.html",
-      "max_price": 50
-    },
-    {
-      "store": "Amazon.es",
-      "product": "Controller",
-      "priority": 2.4,
-      "url": "https://www.amazon.es/dp/B0F2T6WM33",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.es/gp/cart/view.html",
-      "max_price": 125
-    },
-    {
-      "store": "Amazon.es",
-      "product": "Case",
-      "priority": 2.4,
-      "url": "https://www.amazon.es/dp/B0HJ89X1VQ",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.es/gp/cart/view.html",
-      "max_price": 50
-    },
-    {
       "store": "Webhallen",
       "product": "Controller",
       "priority": 3,
@@ -253,26 +153,6 @@
       "priority": 3,
       "url": "https://www.power.se/gaming/nintendo/nintendo-kontroller/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition-gamingkontroll-svartgronguld/p-4531716/",
       "max_price": 1450
-    },
-    {
-      "store": "Amazon.se",
-      "product": "Controller",
-      "priority": 3,
-      "url": "https://www.amazon.se/dp/B0F2T6WM33",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.se/gp/cart/view.html",
-      "max_price": 1450
-    },
-    {
-      "store": "Amazon.se",
-      "product": "Case",
-      "priority": 3,
-      "url": "https://www.amazon.se/dp/B0HJ89X1VQ",
-      "buy_selector": "#add-to-cart-button",
-      "price_selector": "#corePrice_feature_div .a-offscreen, #apex_desktop .a-offscreen",
-      "cart_url": "https://www.amazon.se/gp/cart/view.html",
-      "max_price": 550
     },
     {
       "store": "Webhallen",

@@ -1,8 +1,8 @@
 # Zelda 40th Switch 2 stock watcher
 
 Watches the Zelda 40th Anniversary **Pro Controller + display stand** on the Nintendo Store
-(DE, NL, BE, AT, FR, IE, IT, ES, PT), Amazon EU and Swedish shops.
-The **carrying case** is watched at the Nintendo Store, Amazon EU (incl. .se) and Swedish shops.
+(DE, NL, BE, AT, FR, IE, IT, ES, PT) and Swedish shops (the regular controller, without the stand).
+The **carrying case** is watched at the Nintendo Store and Swedish shops.
 
 When one comes in stock:
 1. **Urgent push to your Android** via ntfy. Tap it to open the product.
@@ -10,7 +10,7 @@ When one comes in stock:
 3. A second push says "In cart". **You** finish checkout and payment.
 
 If several stores restock at once you get **one push per product**, for the best store
-(Nintendo DE → NL → BE → AT → FR → IE → IT → ES → PT → Amazon EU → Sweden), listing the others.
+(Nintendo DE → NL → BE → AT → FR → IE → IT → ES → PT → Sweden), listing the others.
 A later push only comes if a *better* store gets stock.
 
 Anything priced above `max_price` (resellers) is ignored.
@@ -24,8 +24,7 @@ Anything priced above `max_price` (resellers) is ignored.
 1. On your phone, install **ntfy** from Google Play and subscribe to your topic (stored in the local `.topic` file and in the `NTFY_TOPIC` GitHub secret, never in the code).
    In the topic settings, allow it to override Do Not Disturb.
 2. Test it: `./run.sh --test-notify`
-3. Log in to the stores in the watcher's own Chrome profile. Set your delivery address to Sweden
-   on Amazon. Close the window when done:
+3. Log in to the stores in the watcher's own Chrome profile.  Close the window when done:
    `./run.sh --login`
 
 ## Run
