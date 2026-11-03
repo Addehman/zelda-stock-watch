@@ -48,6 +48,9 @@ SOLD_OUT = re.compile(
     r"loppuunmyyty|"
     r"épuisé|rupture de stock|agotado|esaurito)", re.I)
 
+# the product page was removed or moved; the store shows a "not found" page with other products
+GONE = re.compile(r"(inte i vårt sortiment|sidan (du söker |du letar efter )?(kunde inte hittas|finns inte)|"
+                  r"page not found|this page (does not|doesn't) exist)", re.I)
 BLOCKED = re.compile(r"(captcha|are you a robot|access denied|robot check|"
                      r"verify you are human|unusual traffic|pardon our interruption|just a moment|checking your browser)", re.I)
 
@@ -197,6 +200,10 @@ async def check(page, item):
             return "BLOCKED", "empty page (likely bot protection)"
         if BLOCKED.search(body) or BLOCKED.search(await page.title()):
             return "BLOCKED", "bot check / captcha"
+        if GONE.search(body[:3000]) or GONE.search(await page.title()):
+            return "ERROR", "product page gone (moved or removed?)"
+        if item.get("title_regex") and not re.search(item["title_regex"], await page.title(), re.I):
+            return "ERROR", f"wrong page: '{(await page.title())[:60]}'"
         if item.get("status_regex"):
             # stores whose JSON-LD lies: read only the product's own status line
             m = re.search(item["status_regex"], body, re.I | re.M)
@@ -205,6 +212,8 @@ async def check(page, item):
             line = m.group(1).strip()
             if re.search(item.get("out_regex", SOLD_OUT.pattern), line, re.I):
                 return "OUT", f"status '{line}'"
+            if item.get("in_regex") and not re.search(item["in_regex"], line, re.I):
+                return "ERROR", f"unknown status '{line}'"
             price = await page_price(page, item)
             bad = price_check(item, price)
             return ("OVERPRICED", bad) if bad else ("IN_STOCK", f"status '{line}' price={price}")

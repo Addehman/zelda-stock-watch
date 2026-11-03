@@ -199,11 +199,13 @@
       "store": "Spel & Sånt",
       "product": "Controller",
       "priority": 3.5,
-      "url": "https://www.spelochsant.se/produkt/nintendoswitch2/tillbehor/handkontroller/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition?set_language=sv",
+      "url": "https://www.spelochsant.se/produkt/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition-64162?set_language=sv",
       "max_price": 1450,
-      "status_regex": "^\\d[\\d\\s ]*\\s?Kr\\s*\\n\\s*([^\\n]+)",
-      "out_regex": "fullbokad|slutsåld|tillfälligt slut|ej i lager|bevaka|kommande|fully booked|sold out|out of stock|coming soon|notify",
-      "note": "JSON-LD always says InStock; uses the status line under the price"
+      "status_regex": "^\\d[\\d\\s ]*\\s?kr\\s*\\n(?:[^\\n]*\\n){0,4}?\\s*((?:ej i lager|fullbokad|slutsåld|tillfälligt slut|kommande|bevaka|fully booked|sold out|out of stock|coming soon|notify|\\d+\\+? ?(st )?i lager|i lager|lägg i varukorg|förboka|in stock|add to cart|pre-?order)[^\n]*)",
+      "out_regex": "ej i lager|fullbokad|slutsåld|tillfälligt slut|kommande|bevaka|fully booked|sold out|out of stock|coming soon|notify",
+      "note": "JSON-LD always says InStock; reads the status line just under the price (skips 'Lägsta priset...' / 'Max 1 per hushåll')",
+      "in_regex": "\\d+\\+? ?(st )?i lager|^i lager|lägg i varukorg|förboka|in stock|add to cart|pre-?order",
+      "title_regex": "zelda"
     },
     {
       "store": "Arcade Dreams",
@@ -240,11 +242,13 @@
       "store": "Spel & Sånt",
       "product": "Case",
       "priority": 3.5,
-      "url": "https://www.spelochsant.se/produkt/nintendoswitch2/tillbehor/vaskorskydd/nintendoswitch2carryingcasescreenprotectorthelegendofzelda40thanniversaryedition?set_language=sv",
+      "url": "https://www.spelochsant.se/produkt/nintendo-switch-2-carrying-case-screen-protector-the-legend-of-zelda-40th-anniversary-edition-64163?set_language=sv",
       "max_price": 550,
-      "status_regex": "^\\d[\\d\\s ]*\\s?Kr\\s*\\n\\s*([^\\n]+)",
-      "out_regex": "fullbokad|slutsåld|tillfälligt slut|ej i lager|bevaka|kommande|fully booked|sold out|out of stock|coming soon|notify",
-      "note": "JSON-LD always says InStock; uses the status line under the price"
+      "status_regex": "^\\d[\\d\\s ]*\\s?kr\\s*\\n(?:[^\\n]*\\n){0,4}?\\s*((?:ej i lager|fullbokad|slutsåld|tillfälligt slut|kommande|bevaka|fully booked|sold out|out of stock|coming soon|notify|\\d+\\+? ?(st )?i lager|i lager|lägg i varukorg|förboka|in stock|add to cart|pre-?order)[^\n]*)",
+      "out_regex": "ej i lager|fullbokad|slutsåld|tillfälligt slut|kommande|bevaka|fully booked|sold out|out of stock|coming soon|notify",
+      "note": "JSON-LD always says InStock; reads the status line just under the price (skips 'Lägsta priset...' / 'Max 1 per hushåll')",
+      "in_regex": "\\d+\\+? ?(st )?i lager|^i lager|lägg i varukorg|förboka|in stock|add to cart|pre-?order",
+      "title_regex": "zelda"
     }
   ]
 }
