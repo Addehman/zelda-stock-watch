@@ -19,6 +19,7 @@ Usage:
 import argparse, asyncio, json, os, platform, random, re, sys, time, urllib.request
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 from playwright.async_api import async_playwright, TimeoutError as PWTimeout
 
@@ -215,6 +216,8 @@ async def check(page, item):
             await page.wait_for_load_state("networkidle", timeout=8000)
         except PWTimeout:
             pass
+        if urlparse(page.url).path.strip("/") == "" and urlparse(item["url"]).path.strip("/"):
+            return "ERROR", f"redirected to {page.url} (product page gone?)"
         await dismiss_cookies(page)
         body = (await page.locator("body").inner_text(timeout=5000))[:20000]
         if len(body.strip()) < 200:

@@ -152,7 +152,9 @@
       "product": "Controller",
       "priority": 3,
       "url": "https://www.power.se/gaming/nintendo/nintendo-kontroller/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition-gamingkontroll-svartgronguld/p-4531716/",
-      "max_price": 1450
+      "max_price": 1450,
+      "enabled": false,
+      "note": "Removed by Power on 2026-11-09 (URL redirects to the home page; not found in their search)"
     },
     {
       "store": "Webhallen",
