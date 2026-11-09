@@ -145,6 +145,7 @@ def parse_price(text):
         return None
 
 
+PASS_TIMEOUT = 300  # one pass normally takes under a minute
 SEK_PER_EUR = 11  # rough; only used to compare a kronor price with a euro max_price
 
 
@@ -339,11 +340,17 @@ async def main(args):
                 log(f"grab failed: {e}")
 
         while True:
-            ctx = await browser.new_context(locale="en-GB", viewport={"width": 1366, "height": 900})
             # lower "priority" = preferred store (Nintendo DE = 1.0); started first
             items.sort(key=lambda i: (rank(i), random.random()))
-            results = await asyncio.gather(*(handle(ctx, it) for it in items))
-            await ctx.close()
+            try:
+                ctx = await asyncio.wait_for(browser.new_context(
+                    locale="en-GB", viewport={"width": 1366, "height": 900}), 60)
+                results = await asyncio.wait_for(asyncio.gather(*(handle(ctx, it) for it in items)), PASS_TIMEOUT)
+                await asyncio.wait_for(ctx.close(), 60)
+            except asyncio.TimeoutError:
+                # browser hung (e.g. after sleep or a network change): exit, launchd starts a fresh one
+                log(f"pass hung for over {PASS_TIMEOUT}s - restarting")
+                os._exit(1)
             if not args.once:
                 for product in dict.fromkeys(it["product"] for it in items):
                     await alert(product, [r for r in results if r[0]["product"] == product])
