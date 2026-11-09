@@ -250,5 +250,99 @@
       "in_regex": "\\d+\\+? ?(st )?i lager|^i lager|lägg i varukorg|förboka|in stock|add to cart|pre-?order",
       "title_regex": "zelda"
     }
-  ]
+  ],
+  "searches": [
+    {
+      "store": "Nintendo DE",
+      "product": "Ocarina",
+      "url": "https://store.nintendo.com/de-de/search?q=ocarina",
+      "match": "o[ck]arin",
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+    },
+    {
+      "store": "Nintendo NL",
+      "product": "Ocarina",
+      "url": "https://store.nintendo.com/nl-nl/search?q=ocarina",
+      "match": "o[ck]arin",
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+    },
+    {
+      "store": "Nintendo BE",
+      "product": "Ocarina",
+      "url": "https://store.nintendo.com/nl-be/search?q=ocarina",
+      "match": "o[ck]arin",
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+    },
+    {
+      "store": "Nintendo AT",
+      "product": "Ocarina",
+      "url": "https://store.nintendo.com/de-at/search?q=ocarina",
+      "match": "o[ck]arin",
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+    },
+    {
+      "store": "Nintendo FR",
+      "product": "Ocarina",
+      "url": "https://store.nintendo.com/fr-fr/search?q=ocarina",
+      "match": "o[ck]arin",
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+    },
+    {
+      "store": "Nintendo IE",
+      "product": "Ocarina",
+      "url": "https://store.nintendo.com/en-ie/search?q=ocarina",
+      "match": "o[ck]arin",
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+    },
+    {
+      "store": "Nintendo IT",
+      "product": "Ocarina",
+      "url": "https://store.nintendo.com/it-it/search?q=ocarina",
+      "match": "o[ck]arin",
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+    },
+    {
+      "store": "Nintendo ES",
+      "product": "Ocarina",
+      "url": "https://store.nintendo.com/es-es/search?q=ocarina",
+      "match": "o[ck]arin",
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+    },
+    {
+      "store": "Nintendo PT",
+      "product": "Ocarina",
+      "url": "https://store.nintendo.com/pt-pt/search?q=ocarina",
+      "match": "o[ck]arin",
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+    },
+    {
+      "store": "Webhallen",
+      "product": "Ocarina",
+      "url": "https://www.webhallen.com/se/search?searchString=ocarina",
+      "match": "^(?=.*o[ck]arin)(?=.*(zelda|hori|nintendo))(?=.*(electric|elektrisk|playable|spelbar|instrument|hori\\b|NSX-261))",
+      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
+    },
+    {
+      "store": "Power",
+      "product": "Ocarina",
+      "url": "https://www.power.se/search/?q=ocarina",
+      "match": "^(?=.*o[ck]arin)(?=.*(zelda|hori|nintendo))(?=.*(electric|elektrisk|playable|spelbar|instrument|hori\\b|NSX-261))",
+      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
+    },
+    {
+      "store": "Elgiganten",
+      "product": "Ocarina",
+      "url": "https://www.elgiganten.se/search?q=ocarina",
+      "match": "^(?=.*o[ck]arin)(?=.*(zelda|hori|nintendo))(?=.*(electric|elektrisk|playable|spelbar|instrument|hori\\b|NSX-261))",
+      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
+    },
+    {
+      "store": "Arcade Dreams",
+      "product": "Ocarina",
+      "url": "https://arcadedreams.se/?s=ocarina&post_type=product",
+      "match": "^(?=.*o[ck]arin)(?=.*(zelda|hori|nintendo))(?=.*(electric|elektrisk|playable|spelbar|instrument|hori\\b|NSX-261))",
+      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
+    }
+  ],
+  "_help_searches": "searches: for products not sold anywhere yet. Each pass loads the search page and pushes once for every NEW product link matching 'match' (and not 'ignore')."
 }

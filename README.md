@@ -3,6 +3,8 @@
 Watches the Zelda 40th Anniversary **Pro Controller + display stand** on the Nintendo Store
 (DE, NL, BE, AT, FR, IE, IT, ES, PT) and Swedish shops (the regular controller, without the stand).
 The **carrying case** is watched at the Nintendo Store and Swedish shops.
+The **Ocarina of Time ocarinas** (Nintendo's playable one and HORI's electric one) aren't sold in Europe yet:
+the watcher checks the Nintendo Store's and Swedish shops' search pages and pushes once when a new listing appears (`searches` in `config.json`).
 
 When one comes in stock:
 1. **Urgent push to your Android** via ntfy. Tap it to open the product.

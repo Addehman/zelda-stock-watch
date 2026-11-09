@@ -185,6 +185,26 @@ async def check_webhallen(page, item):
     return "OUT", f"web stock 0 @ {price:g}"
 
 
+async def check_listings(page, search):
+    """-> {url: card text} of product links on a search page that match search["match"]."""
+    await page.goto(search["url"], wait_until="domcontentloaded", timeout=45000)
+    try:
+        await page.wait_for_load_state("networkidle", timeout=8000)
+    except PWTimeout:
+        pass
+    await dismiss_cookies(page)
+    for _ in range(3):  # lazy-loaded result grids
+        await page.mouse.wheel(0, 3000); await page.wait_for_timeout(600)
+    links = await page.eval_on_selector_all(
+        "a[href]", "as => as.map(a => [a.href.split('?')[0], (a.innerText || '').trim().replace(/\\s+/g, ' ').slice(0, 160)])")
+    found = {}
+    for href, text in links:
+        both = f"{href} {text}"
+        if re.search(search["match"], both, re.I) and not re.search(search.get("ignore", "$^"), both, re.I):
+            found[href] = max(found.get(href, ""), text, key=len)
+    return found
+
+
 async def check(page, item):
     """-> (status, detail). status in IN_STOCK, OUT, OVERPRICED, BLOCKED, ERROR"""
     try:
@@ -269,6 +289,7 @@ async def grab(pw, item):
 async def main(args):
     state = json.loads(STATE_FILE.read_text()) if STATE_FILE.exists() else {}
     items = [i for i in CONFIG["items"] if i.get("enabled", True)]
+    searches = [s for s in CONFIG.get("searches", []) if s.get("enabled", True)]
     interval = CONFIG.get("interval_seconds", 120)
     stop_at = time.time() + args.keep_going
     async with async_playwright() as pw:
@@ -303,6 +324,27 @@ async def main(args):
                        "Watcher can't see this store right now. Tap to check it yourself.",
                        it["url"], priority="default", tags="warning")
             return it, status, detail, prev
+
+        async def handle_search(ctx, sr):
+            """Alert once per new matching product link (e.g. a product that isn't sold here yet)."""
+            async with sem:
+                page = await ctx.new_page()
+                try:
+                    found = await check_listings(page, sr)
+                except Exception as e:
+                    log(f"ERROR      search {sr['store']:<16} {sr['product']:<10} {str(e)[:120]}")
+                    return
+                finally:
+                    await page.close()
+            seen = state.setdefault("_seen_listings", {}).setdefault(sr["url"], [])
+            new = {h: t for h, t in found.items() if h not in seen}
+            log(f"{'NEW' if new else 'LISTINGS':10} search {sr['store']:<16} {sr['product']:<10} "
+                f"{len(found)} match(es){': ' + ', '.join(new) if new else ''}")
+            for href, text in new.items():
+                seen.append(href)
+                notify(f"NEW LISTING: {sr['product']} @ {sr['store']}",
+                       f"{text or href}\nNew product page found. Tap to open it.", href,
+                       priority="high", tags="mag,video_game")
 
         def rank(it):
             return it.get("priority", 5)
@@ -345,7 +387,9 @@ async def main(args):
             try:
                 ctx = await asyncio.wait_for(browser.new_context(
                     locale="en-GB", viewport={"width": 1366, "height": 900}), 60)
-                results = await asyncio.wait_for(asyncio.gather(*(handle(ctx, it) for it in items)), PASS_TIMEOUT)
+                results, _ = await asyncio.wait_for(asyncio.gather(
+                    asyncio.gather(*(handle(ctx, it) for it in items)),
+                    asyncio.gather(*(handle_search(ctx, sr) for sr in searches))), PASS_TIMEOUT)
                 await asyncio.wait_for(ctx.close(), 60)
             except asyncio.TimeoutError:
                 # browser hung (e.g. after sleep or a network change): exit, launchd starts a fresh one
