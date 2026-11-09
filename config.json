@@ -256,63 +256,63 @@
       "store": "Nintendo DE",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/de-de/search?q=ocarina",
-      "match": "o[ck]arin",
+      "match": "o[ck]arin[^ ]*-\\d{10,} ",
       "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
     },
     {
       "store": "Nintendo NL",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/nl-nl/search?q=ocarina",
-      "match": "o[ck]arin",
+      "match": "o[ck]arin[^ ]*-\\d{10,} ",
       "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
     },
     {
       "store": "Nintendo BE",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/nl-be/search?q=ocarina",
-      "match": "o[ck]arin",
+      "match": "o[ck]arin[^ ]*-\\d{10,} ",
       "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
     },
     {
       "store": "Nintendo AT",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/de-at/search?q=ocarina",
-      "match": "o[ck]arin",
+      "match": "o[ck]arin[^ ]*-\\d{10,} ",
       "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
     },
     {
       "store": "Nintendo FR",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/fr-fr/search?q=ocarina",
-      "match": "o[ck]arin",
+      "match": "o[ck]arin[^ ]*-\\d{10,} ",
       "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
     },
     {
       "store": "Nintendo IE",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/en-ie/search?q=ocarina",
-      "match": "o[ck]arin",
+      "match": "o[ck]arin[^ ]*-\\d{10,} ",
       "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
     },
     {
       "store": "Nintendo IT",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/it-it/search?q=ocarina",
-      "match": "o[ck]arin",
+      "match": "o[ck]arin[^ ]*-\\d{10,} ",
       "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
     },
     {
       "store": "Nintendo ES",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/es-es/search?q=ocarina",
-      "match": "o[ck]arin",
+      "match": "o[ck]arin[^ ]*-\\d{10,} ",
       "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
     },
     {
       "store": "Nintendo PT",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/pt-pt/search?q=ocarina",
-      "match": "o[ck]arin",
+      "match": "o[ck]arin[^ ]*-\\d{10,} ",
       "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
     },
     {
