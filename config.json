@@ -153,8 +153,7 @@
       "priority": 3,
       "url": "https://www.power.se/gaming/nintendo/nintendo-kontroller/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition-gamingkontroll-svartgronguld/p-4531716/",
       "max_price": 1450,
-      "enabled": false,
-      "note": "Removed by Power on 2026-11-09 (URL redirects to the home page; not found in their search)"
+      "note": "Removed by Power on 2026-11-09; the URL redirects to the home page, which is logged as ERROR (no push). Checked normally again if the page returns."
     },
     {
       "store": "Webhallen",
@@ -330,6 +329,14 @@
       "url": "https://www.power.se/search/?q=ocarina",
       "match": "^(?=.*o[ck]arin)(?=.*(zelda|hori|nintendo))(?=.*(electric|elektrisk|playable|spelbar|instrument|hori\\b|NSX-261))",
       "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
+    },
+    {
+      "store": "Power",
+      "product": "Controller",
+      "url": "https://www.power.se/search/?q=zelda",
+      "match": "^(?=.*zelda)(?=.*40th)(?=.*(controller|kontroll))",
+      "ignore": "amiibo",
+      "note": "Catches the Zelda Pro Controller if Power re-lists it under a new product page."
     },
     {
       "store": "Elgiganten",
