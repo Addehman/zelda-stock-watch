@@ -1,23 +1,23 @@
 # Temporary: find search-result links for the Zelda 40th items on stores the Mac can't reach.
-import asyncio, sys
+import asyncio, sys, re
 from playwright.async_api import async_playwright
 import watch
 LOCS = ["de-de", "nl-nl", "fr-be", "de-at", "fr-fr", "en-ie", "it-it", "es-es", "pt-pt"]
-URLS = [f"https://store.nintendo.com/{l}/search?search=zelda" for l in LOCS] + [
-    "https://store.nintendo.com/de-de/search?q=ocarina", "https://store.nintendo.com/de-de/search?search=ocarina",
-    "https://www.retrospelbutiken.se/store/search.php?s=zelda", "https://www.retrospelbutiken.se/store/search.php?s=zelda+40th"]
+URLS = ["https://store.nintendo.com/de-de/search?search=zelda", "https://store.nintendo.com/en-ie/search?q=zelda",
+    "https://store.nintendo.com/en-ie/search?search=pro%20controller", "https://store.nintendo.com/en-ie/search?search=mario"]
 async def one(ctx, u):
     p = await ctx.new_page()
     try:
         await p.goto(u, wait_until="domcontentloaded", timeout=40000)
-        await p.wait_for_timeout(6000)
+        await p.wait_for_timeout(15000)
         await watch.dismiss_cookies(p)
         for _ in range(3):
             await p.mouse.wheel(0, 3000); await p.wait_for_timeout(800)
         links = await p.eval_on_selector_all("a[href]", "es=>es.map(e=>e.href+' | '+e.innerText.replace(/\\s+/g,' ').slice(0,80))")
         forms = await p.eval_on_selector_all("form", "fs=>fs.map(f=>f.action+' '+f.method+' '+[...f.querySelectorAll('input')].map(i=>i.name+'='+i.type).join(','))")
         out = [f"== {u} -> {p.url} ({len(links)} links) forms={forms}"]
-        out += ["    " + l[:240] for l in dict.fromkeys(links) if 'zelda' in l.lower() and ('40' in l or 'jubil' in l.lower() or 'anniv' in l.lower())]
+        out += ["    " + l[:240] for l in dict.fromkeys(links) if re.search(r'-\\d{10,}', l)]
+        out.append("    TEXT: " + (await p.locator("main").first.inner_text())[:1500].replace(chr(10), " / "))
         print("\n".join(out), flush=True)
     except Exception as e:
         print(f"== {u} ERR {str(e)[:150]}", flush=True)
