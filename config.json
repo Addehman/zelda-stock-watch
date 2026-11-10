@@ -217,10 +217,25 @@
     },
     {
       "store": "GameShop",
+      "product": "Controller",
+      "priority": 3.5,
+      "url": "https://gameshop.se/product/spel/nintendo-switch-2/hardvara-nintendo-switch-2/1588890/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition/",
+      "max_price": 1450
+    },
+    {
+      "store": "GameShop",
       "product": "Case",
       "priority": 3.5,
       "url": "https://gameshop.se/product/spel/nintendo-switch-2/hardvara-nintendo-switch-2/1589272/nintendo-switch-2-carrying-case-the-legend-of-zelda-40th-anniversary-edition-screen-protector/",
       "max_price": 550
+    },
+    {
+      "store": "Retrospelbutiken",
+      "product": "Controller",
+      "priority": 3.5,
+      "url": "https://www.retrospelbutiken.se/store/produkt.php?produkt=56242",
+      "max_price": 1450,
+      "sold_out_text": "kommande|bli informerad|slutsåld|ej i lager"
     },
     {
       "store": "Retrospelbutiken",
@@ -331,14 +346,6 @@
       "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
     },
     {
-      "store": "Power",
-      "product": "Controller",
-      "url": "https://www.power.se/search/?q=zelda",
-      "match": "^(?=.*zelda)(?=.*40th)(?=.*(controller|kontroll))",
-      "ignore": "amiibo",
-      "note": "Catches the Zelda Pro Controller if Power re-lists it under a new product page."
-    },
-    {
       "store": "Elgiganten",
       "product": "Ocarina",
       "url": "https://www.elgiganten.se/search?q=ocarina",
@@ -351,7 +358,116 @@
       "url": "https://arcadedreams.se/?s=ocarina&post_type=product",
       "match": "^(?=.*o[ck]arin)(?=.*(zelda|hori|nintendo))(?=.*(electric|elektrisk|playable|spelbar|instrument|hori\\b|NSX-261))",
       "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
+    },
+    {
+      "store": "Nintendo DE",
+      "product": "Zelda 40th",
+      "url": "https://store.nintendo.com/de-de/search?q=zelda%2040",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Nintendo NL",
+      "product": "Zelda 40th",
+      "url": "https://store.nintendo.com/nl-nl/search?q=zelda%2040",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Nintendo BE",
+      "product": "Zelda 40th",
+      "url": "https://store.nintendo.com/fr-be/search?q=zelda%2040",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Nintendo AT",
+      "product": "Zelda 40th",
+      "url": "https://store.nintendo.com/de-at/search?q=zelda%2040",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Nintendo FR",
+      "product": "Zelda 40th",
+      "url": "https://store.nintendo.com/fr-fr/search?q=zelda%2040",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Nintendo IE",
+      "product": "Zelda 40th",
+      "url": "https://store.nintendo.com/en-ie/search?q=zelda%2040",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Nintendo IT",
+      "product": "Zelda 40th",
+      "url": "https://store.nintendo.com/it-it/search?q=zelda%2040",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Nintendo ES",
+      "product": "Zelda 40th",
+      "url": "https://store.nintendo.com/es-es/search?q=zelda%2040",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Nintendo PT",
+      "product": "Zelda 40th",
+      "url": "https://store.nintendo.com/pt-pt/search?q=zelda%2040",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Webhallen",
+      "product": "Zelda 40th",
+      "url": "https://www.webhallen.com/se/search?searchString=zelda%2040th",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Power",
+      "product": "Zelda 40th",
+      "url": "https://www.power.se/search/?q=zelda",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Arcade Dreams",
+      "product": "Zelda 40th",
+      "url": "https://arcadedreams.se/?s=zelda+40th&post_type=product",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "GameShop",
+      "product": "Zelda 40th",
+      "url": "https://gameshop.se/?s=zelda+40th&post_type=product",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Retrospelbutiken",
+      "product": "Zelda 40th",
+      "url": "https://www.retrospelbutiken.se/store/search.php?s=zelda+40th",
+      "keep_query": true,
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
+    },
+    {
+      "store": "Spel & Sånt",
+      "product": "Zelda 40th",
+      "type": "sitemap",
+      "every_seconds": 600,
+      "url": "https://www.spelochsant.se/__sitemap__/sv-sv.xml",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
+      "ignore": "amiibo|powera|\\bpins?\\b|lego"
     }
   ],
-  "_help_searches": "searches: for products not sold anywhere yet. Each pass loads the search page and pushes once for every NEW product link matching 'match' (and not 'ignore')."
+  "_help_searches": "searches: for products not sold anywhere yet. Each pass loads the search page and pushes once for every NEW product link matching 'match' (and not 'ignore').",
+  "_help_relisting": "'Zelda 40th' searches catch the controller or case if a store re-lists it under a new product page. Pages already in 'items' are never reported, and a new search's first run only records what is already listed (no push)."
 }

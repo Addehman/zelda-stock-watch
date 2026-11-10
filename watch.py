@@ -146,7 +146,15 @@ def parse_price(text):
         return None
 
 
-PASS_TIMEOUT = 300  # one pass normally takes under a minute
+PASS_TIMEOUT = 300
+ITEM_TIMEOUT = 90  # one stuck page becomes an ERROR for that store instead of hanging the pass
+
+
+async def close_page(page):
+    try:
+        await asyncio.wait_for(page.close(), 15)
+    except Exception:
+        pass  # a wedged tab is dropped with its context at the end of the pass  # one pass normally takes under a minute
 SEK_PER_EUR = 11  # rough; only used to compare a kronor price with a euro max_price
 
 
@@ -186,8 +194,32 @@ async def check_webhallen(page, item):
     return "OUT", f"web stock 0 @ {price:g}"
 
 
+def listing_matches(search, href, text=""):
+    both = f"{href} {text}"
+    return re.search(search["match"], both, re.I) and not re.search(search.get("ignore", "$^"), both, re.I)
+
+
+def check_sitemap(search):
+    """-> {url: ""} of sitemap <loc> URLs that match search["match"]."""
+    req = urllib.request.Request(search["url"], headers={"User-Agent": "Mozilla/5.0"})
+    xml = urllib.request.urlopen(req, timeout=60).read().decode("utf-8", "replace")
+    locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", xml)
+    if not locs:
+        raise RuntimeError("sitemap has no <loc> entries (moved?)")
+    return {u: "" for u in locs if listing_matches(search, u)}
+
+
+def product_key(url):
+    """Last meaningful part of a product URL, so the same product under another category path still matches."""
+    u = urlparse(url)
+    q = re.search(r"(?:^|&)(?:produkt|product|id|p)=(\w+)", u.query)
+    return q.group(1) if q else u.path.rstrip("/").rsplit("/", 1)[-1].lower()
+
+
 async def check_listings(page, search):
     """-> {url: card text} of product links on a search page that match search["match"]."""
+    if search.get("type") == "sitemap":
+        return await asyncio.to_thread(check_sitemap, search)
     await page.goto(search["url"], wait_until="domcontentloaded", timeout=45000)
     try:
         await page.wait_for_load_state("networkidle", timeout=8000)
@@ -197,11 +229,12 @@ async def check_listings(page, search):
     for _ in range(3):  # lazy-loaded result grids
         await page.mouse.wheel(0, 3000); await page.wait_for_timeout(600)
     links = await page.eval_on_selector_all(
-        "a[href]", "as => as.map(a => [a.href.split('?')[0], (a.innerText || '').trim().replace(/\\s+/g, ' ').slice(0, 160)])")
+        "a[href]", "as => as.map(a => [a.href.split('#')[0], (a.innerText || '').trim().replace(/\\s+/g, ' ').slice(0, 160)])")
     found = {}
     for href, text in links:
-        both = f"{href} {text}"
-        if re.search(search["match"], both, re.I) and not re.search(search.get("ignore", "$^"), both, re.I):
+        if not search.get("keep_query"):
+            href = href.split("?")[0]
+        if listing_matches(search, href, text):
             found[href] = max(found.get(href, ""), text, key=len)
     return found
 
@@ -312,9 +345,11 @@ async def main(args):
             async with sem:
                 page = await ctx.new_page()
                 try:
-                    status, detail = await check(page, it)
+                    status, detail = await asyncio.wait_for(check(page, it), ITEM_TIMEOUT)
+                except asyncio.TimeoutError:
+                    status, detail = "ERROR", f"page stuck for over {ITEM_TIMEOUT}s - skipped this round"
                 finally:
-                    await page.close()
+                    await close_page(page)
             prev = state.get(it["url"], {}).get("status")
             log(f"{status:10} p{it.get('priority', 5)} {it['store']:<16} {it['product']:<10} {detail}")
             blocked = state.setdefault("_blocked_push", {})
@@ -328,19 +363,31 @@ async def main(args):
                        it["url"], priority="default", tags="warning")
             return it, status, detail, prev
 
+        watched = {product_key(i["url"]) for i in CONFIG["items"]}
+
         async def handle_search(ctx, sr):
             """Alert once per new matching product link (e.g. a product that isn't sold here yet)."""
+            last_run = state.setdefault("_search_ran", {})
+            if time.time() - last_run.get(sr["url"], 0) < sr.get("every_seconds", 0):
+                return
             async with sem:
                 page = await ctx.new_page()
                 try:
-                    found = await check_listings(page, sr)
-                except Exception as e:
-                    log(f"ERROR      search {sr['store']:<16} {sr['product']:<10} {str(e)[:120]}")
+                    found = await asyncio.wait_for(check_listings(page, sr), ITEM_TIMEOUT)
+                except (Exception, asyncio.TimeoutError) as e:
+                    log(f"ERROR      search {sr['store']:<16} {sr['product']:<10} {str(e)[:120] or 'page stuck - skipped'}")
                     return
                 finally:
-                    await page.close()
-            seen = state.setdefault("_seen_listings", {}).setdefault(sr["url"], [])
-            new = {h: t for h, t in found.items() if h not in seen}
+                    await close_page(page)
+            last_run[sr["url"]] = time.time()
+            first = sr["url"] not in state.setdefault("_seen_listings", {})
+            seen = state["_seen_listings"].setdefault(sr["url"], [])
+            # pages we already watch directly are not "new", even under another category path
+            new = {h: t for h, t in found.items() if h not in seen and product_key(h) not in watched}
+            if first and new:  # first run of a new search: remember what's already listed, no push
+                seen.extend(new)
+                log(f"BASELINE   search {sr['store']:<16} {sr['product']:<10} {len(new)} existing: {', '.join(new)}")
+                return
             log(f"{'NEW' if new else 'LISTINGS':10} search {sr['store']:<16} {sr['product']:<10} "
                 f"{len(found)} match(es){': ' + ', '.join(new) if new else ''}")
             for href, text in new.items():
@@ -393,11 +440,14 @@ async def main(args):
                 results, _ = await asyncio.wait_for(asyncio.gather(
                     asyncio.gather(*(handle(ctx, it) for it in items)),
                     asyncio.gather(*(handle_search(ctx, sr) for sr in searches))), PASS_TIMEOUT)
-                await asyncio.wait_for(ctx.close(), 60)
+                try:
+                    await asyncio.wait_for(ctx.close(), 60)
+                except asyncio.TimeoutError:
+                    log("browser context would not close - leaving it")
             except asyncio.TimeoutError:
                 # browser hung (e.g. after sleep or a network change): exit, launchd starts a fresh one
                 log(f"pass hung for over {PASS_TIMEOUT}s - restarting")
-                os._exit(1)
+                os._exit(0 if args.ci else 1)  # CI: the next scheduled run starts fresh; no failure email
             if not args.once:
                 for product in dict.fromkeys(it["product"] for it in items):
                     await alert(product, [r for r in results if r[0]["product"] == product])
