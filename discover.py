@@ -3,9 +3,9 @@ import asyncio, sys
 from playwright.async_api import async_playwright
 import watch
 LOCS = ["de-de", "nl-nl", "fr-be", "de-at", "fr-fr", "en-ie", "it-it", "es-es", "pt-pt"]
-URLS = [f"https://store.nintendo.com/{l}/search?q=zelda" for l in LOCS] + [
-    "https://www.retrospelbutiken.se/store/", "https://www.retrospelbutiken.se/store/sok.php?q=zelda",
-    "https://www.retrospelbutiken.se/store/sok.php?sok=zelda", "https://www.retrospelbutiken.se/store/search.php?q=zelda"]
+URLS = [f"https://store.nintendo.com/{l}/search?search=zelda" for l in LOCS] + [
+    "https://store.nintendo.com/de-de/search?q=ocarina", "https://store.nintendo.com/de-de/search?search=ocarina",
+    "https://www.retrospelbutiken.se/store/search.php?s=zelda", "https://www.retrospelbutiken.se/store/search.php?s=zelda+40th"]
 async def one(ctx, u):
     p = await ctx.new_page()
     try:
