@@ -328,6 +328,7 @@ async def main(args):
     searches = [s for s in CONFIG.get("searches", []) if s.get("enabled", True)]
     interval = CONFIG.get("interval_seconds", 120)
     stop_at = time.time() + args.keep_going
+    started = time.time()
     async with async_playwright() as pw:
         if args.login:
             ctx = await pw.chromium.launch_persistent_context(
@@ -457,6 +458,11 @@ async def main(args):
             pause = interval * random.uniform(0.8, 1.2)
             if args.once or (args.ci and time.time() + pause > stop_at):
                 return
+            if not args.ci and time.time() - started > 6 * 3600:
+                # Playwright's driver slowly grows until it runs out of memory (~1.5 days);
+                # a clean exit here lets launchd start a fresh one first
+                log("6 h uptime - restarting for a fresh browser")
+                os._exit(0)
             await asyncio.sleep(pause)
 
 
