@@ -385,15 +385,21 @@ async def main(args):
             first = sr["url"] not in state.setdefault("_seen_listings", {})
             seen = state["_seen_listings"].setdefault(sr["url"], [])
             # pages we already watch directly are not "new", even under another category path
-            new = {h: t for h, t in found.items() if h not in seen and product_key(h) not in watched}
+            # one push per product: Nintendo serves the same item under several translated slugs,
+            # so compare the trailing product number (e.g. -000000000010021488) when there is one
+            pid = lambda h: (m.group(1) if (m := re.search(r"-(\d{8,}|[PB]\d{5})/?$", h)) else h)
+            seen_ids = {pid(h) for h in seen}
+            new = {}
+            for h, t in found.items():
+                if pid(h) not in seen_ids and product_key(h) not in watched:
+                    new[h] = t; seen_ids.add(pid(h))
+            seen.extend(h for h in found if h not in seen)  # remember every spelling
             if first and new:  # first run of a new search: remember what's already listed, no push
-                seen.extend(new)
                 log(f"BASELINE   search {sr['store']:<16} {sr['product']:<10} {len(new)} existing: {', '.join(new)}")
                 return
             log(f"{'NEW' if new else 'LISTINGS':10} search {sr['store']:<16} {sr['product']:<10} "
                 f"{len(found)} match(es){': ' + ', '.join(new) if new else ''}")
             for href, text in new.items():
-                seen.append(href)
                 notify(f"NEW LISTING: {sr['product']} @ {sr['store']}",
                        f"{text or href}\nNew product page found. Tap to open it.", href,
                        priority="high", tags="mag,video_game")
