@@ -16,7 +16,9 @@
       "product": "Case",
       "priority": 1.0,
       "url": "https://store.nintendo.com/de-de/nintendo-switch-2-tasche-the-legend-of-zelda-edition-zum-40-jubilum-and-schutzfolie-000000000010019439",
-      "max_price": 50
+      "max_price": 50,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Nintendo NL",
@@ -31,7 +33,9 @@
       "product": "Case",
       "priority": 1.1,
       "url": "https://store.nintendo.com/nl-nl/nintendo-switch-2-etui-the-legend-of-zelda-40th-anniversary-edition-en-beschermfolie-000000000010019439",
-      "max_price": 50
+      "max_price": 50,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Nintendo BE",
@@ -46,7 +50,9 @@
       "product": "Case",
       "priority": 1.2,
       "url": "https://store.nintendo.com/fr-be/pochette-de-transport-edition-40e-anniversaire-de-the-legend-of-zelda-et-protection-decran-nintendo-switch2-000000000010019439",
-      "max_price": 50
+      "max_price": 50,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Nintendo AT",
@@ -61,7 +67,9 @@
       "product": "Case",
       "priority": 1.3,
       "url": "https://store.nintendo.com/de-at/nintendo-switch-2-tasche-the-legend-of-zelda-edition-zum-40-jubilum-and-schutzfolie-000000000010019439",
-      "max_price": 50
+      "max_price": 50,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Nintendo FR",
@@ -75,9 +83,10 @@
       "store": "Nintendo FR",
       "product": "Case",
       "priority": 1.4,
-      "enabled": true,
+      "enabled": false,
       "url": "https://store.nintendo.com/fr-fr/pochette-de-transport-edition-40e-anniversaire-de-the-legend-of-zelda-et-protection-decran-nintendo-switch2-000000000010019439",
-      "max_price": 50
+      "max_price": 50,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Nintendo IE",
@@ -92,7 +101,9 @@
       "product": "Case",
       "priority": 1.5,
       "url": "https://store.nintendo.com/en-ie/nintendo-switch-2-carrying-case-the-legend-of-zelda-40th-anniversary-edition-and-screen-protector-000000000010019439",
-      "max_price": 50
+      "max_price": 50,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Nintendo IT",
@@ -107,7 +118,9 @@
       "product": "Case",
       "priority": 1.6,
       "url": "https://store.nintendo.com/it-it/custodia-edizione-speciale-40-anniversario-di-the-legend-of-zelda-con-pellicola-protettiva-per-nintendo-switch-2-000000000010019439",
-      "max_price": 50
+      "max_price": 50,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Nintendo ES",
@@ -122,7 +135,9 @@
       "product": "Case",
       "priority": 1.7,
       "url": "https://store.nintendo.com/es-es/funda-edicin-40-aniversario-de-the-legend-of-zelda-y-protector-de-pantalla-de-nintendo-switch-2-000000000010019439",
-      "max_price": 50
+      "max_price": 50,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Nintendo PT",
@@ -137,7 +152,9 @@
       "product": "Case",
       "priority": 1.8,
       "url": "https://store.nintendo.com/pt-pt/bolsa-de-transporte-edio-do-40-aniversrio-de-the-legend-of-zelda-e-protetor-de-ecr-da-nintendo-switch-2-000000000010019439",
-      "max_price": 50
+      "max_price": 50,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Webhallen",
@@ -145,7 +162,9 @@
       "priority": 3,
       "url": "https://www.webhallen.com/se/product/401808-Nintendo-Switch-2-Pro-Controller-The-Legend-of-Zelda-40th-Anniversary-Edition",
       "max_price": 1450,
-      "type": "webhallen"
+      "type": "webhallen",
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Power",
@@ -153,7 +172,8 @@
       "priority": 3,
       "url": "https://www.power.se/gaming/nintendo/nintendo-kontroller/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition-gamingkontroll-svartgronguld/p-4531716/",
       "max_price": 1450,
-      "note": "Removed by Power on 2026-11-09; the URL redirects to the home page, which is logged as ERROR (no push). Checked normally again if the page returns."
+      "note": "Turned off on 2026-11-19 at the user's request",
+      "enabled": false
     },
     {
       "store": "Webhallen",
@@ -161,7 +181,9 @@
       "priority": 3,
       "url": "https://www.webhallen.com/se/product/401806-Nintendo-Switch-2-Carrying-Case-The-Legend-of-Zelda-40th-AE",
       "max_price": 550,
-      "type": "webhallen"
+      "type": "webhallen",
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Inet",
@@ -187,14 +209,18 @@
       "product": "Case",
       "priority": 3,
       "url": "https://www.power.se/product/p-4531718/",
-      "max_price": 550
+      "max_price": 550,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Arcade Dreams",
       "product": "Controller",
       "priority": 3.5,
       "url": "https://arcadedreams.se/shop/nintendo-switch-2/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition",
-      "max_price": 1450
+      "max_price": 1450,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Spel & Sånt",
@@ -204,30 +230,37 @@
       "max_price": 1450,
       "status_regex": "^\\d[\\d\\s ]*\\s?kr\\s*\\n(?:[^\\n]*\\n){0,4}?\\s*((?:ej i lager|fullbokad|slutsåld|tillfälligt slut|kommande|bevaka|fully booked|sold out|out of stock|coming soon|notify|\\d+\\+? ?(st )?i lager|i lager|lägg i varukorg|förboka|in stock|add to cart|pre-?order)[^\n]*)",
       "out_regex": "ej i lager|fullbokad|slutsåld|tillfälligt slut|kommande|bevaka|fully booked|sold out|out of stock|coming soon|notify",
-      "note": "JSON-LD always says InStock; reads the status line just under the price (skips 'Lägsta priset...' / 'Max 1 per hushåll')",
+      "note": "Turned off on 2026-11-19 at the user's request",
       "in_regex": "\\d+\\+? ?(st )?i lager|^i lager|lägg i varukorg|förboka|in stock|add to cart|pre-?order",
-      "title_regex": "zelda"
+      "title_regex": "zelda",
+      "enabled": false
     },
     {
       "store": "Arcade Dreams",
       "product": "Case",
       "priority": 3.5,
       "url": "https://arcadedreams.se/shop/forbokningar/nintendo-switch-2-carrying-case-screen-protector-the-legend-of-zelda-40th-anniversary-edition",
-      "max_price": 550
+      "max_price": 550,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "GameShop",
       "product": "Controller",
       "priority": 3.5,
       "url": "https://gameshop.se/product/spel/nintendo-switch-2/hardvara-nintendo-switch-2/1588890/nintendo-switch-2-pro-controller-the-legend-of-zelda-40th-anniversary-edition/",
-      "max_price": 1450
+      "max_price": 1450,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "GameShop",
       "product": "Case",
       "priority": 3.5,
       "url": "https://gameshop.se/product/spel/nintendo-switch-2/hardvara-nintendo-switch-2/1589272/nintendo-switch-2-carrying-case-the-legend-of-zelda-40th-anniversary-edition-screen-protector/",
-      "max_price": 550
+      "max_price": 550,
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Retrospelbutiken",
@@ -235,7 +268,9 @@
       "priority": 3.5,
       "url": "https://www.retrospelbutiken.se/store/produkt.php?produkt=56242",
       "max_price": 1450,
-      "sold_out_text": "kommande|bli informerad|slutsåld|ej i lager"
+      "sold_out_text": "kommande|bli informerad|slutsåld|ej i lager",
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Retrospelbutiken",
@@ -243,7 +278,9 @@
       "priority": 3.5,
       "url": "https://www.retrospelbutiken.se/store/produkt.php?produkt=56240",
       "max_price": 550,
-      "sold_out_text": "kommande|bli informerad|slutsåld|ej i lager"
+      "sold_out_text": "kommande|bli informerad|slutsåld|ej i lager",
+      "enabled": false,
+      "note": "Turned off on 2026-11-19 at the user's request"
     },
     {
       "store": "Proshop",
@@ -262,9 +299,10 @@
       "max_price": 550,
       "status_regex": "^\\d[\\d\\s ]*\\s?kr\\s*\\n(?:[^\\n]*\\n){0,4}?\\s*((?:ej i lager|fullbokad|slutsåld|tillfälligt slut|kommande|bevaka|fully booked|sold out|out of stock|coming soon|notify|\\d+\\+? ?(st )?i lager|i lager|lägg i varukorg|förboka|in stock|add to cart|pre-?order)[^\n]*)",
       "out_regex": "ej i lager|fullbokad|slutsåld|tillfälligt slut|kommande|bevaka|fully booked|sold out|out of stock|coming soon|notify",
-      "note": "JSON-LD always says InStock; reads the status line just under the price (skips 'Lägsta priset...' / 'Max 1 per hushåll')",
+      "note": "Turned off on 2026-11-19 at the user's request",
       "in_regex": "\\d+\\+? ?(st )?i lager|^i lager|lägg i varukorg|förboka|in stock|add to cart|pre-?order",
-      "title_regex": "zelda"
+      "title_regex": "zelda",
+      "enabled": false
     }
   ],
   "searches": [
@@ -273,198 +311,153 @@
       "product": "Ocarina",
       "url": "https://store.nintendo.com/de-de/search?q=ocarina",
       "match": "o[ck]arin[^ ]*-\\d{10,} ",
-      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Nintendo NL",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/nl-nl/search?q=ocarina",
       "match": "o[ck]arin[^ ]*-\\d{10,} ",
-      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Nintendo BE",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/nl-be/search?q=ocarina",
       "match": "o[ck]arin[^ ]*-\\d{10,} ",
-      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Nintendo AT",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/de-at/search?q=ocarina",
       "match": "o[ck]arin[^ ]*-\\d{10,} ",
-      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Nintendo FR",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/fr-fr/search?q=ocarina",
       "match": "o[ck]arin[^ ]*-\\d{10,} ",
-      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Nintendo IE",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/en-ie/search?q=ocarina",
       "match": "o[ck]arin[^ ]*-\\d{10,} ",
-      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Nintendo IT",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/it-it/search?q=ocarina",
       "match": "o[ck]arin[^ ]*-\\d{10,} ",
-      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Nintendo ES",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/es-es/search?q=ocarina",
       "match": "o[ck]arin[^ ]*-\\d{10,} ",
-      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Nintendo PT",
       "product": "Ocarina",
       "url": "https://store.nintendo.com/pt-pt/search?q=ocarina",
       "match": "o[ck]arin[^ ]*-\\d{10,} ",
-      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend"
+      "ignore": "amiibo|\\bpins?\\b|-pin-|pins-|speldje|spilla|lego|jigsaw|puzzle|-7\\d{13}$|NINTENDO SWITCH 2 The Legend|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Webhallen",
       "product": "Ocarina",
       "url": "https://www.webhallen.com/se/search?searchString=ocarina",
       "match": "^(?=.*o[ck]arin)(?=.*(zelda|hori|nintendo))(?=.*(electric|elektrisk|playable|spelbar|instrument|hori\\b|NSX-261))",
-      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
+      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Power",
       "product": "Ocarina",
       "url": "https://www.power.se/search/?q=ocarina",
       "match": "^(?=.*o[ck]arin)(?=.*(zelda|hori|nintendo))(?=.*(electric|elektrisk|playable|spelbar|instrument|hori\\b|NSX-261))",
-      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
+      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Elgiganten",
       "product": "Ocarina",
       "url": "https://www.elgiganten.se/search?q=ocarina",
       "match": "^(?=.*o[ck]arin)(?=.*(zelda|hori|nintendo))(?=.*(electric|elektrisk|playable|spelbar|instrument|hori\\b|NSX-261))",
-      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
+      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Arcade Dreams",
       "product": "Ocarina",
       "url": "https://arcadedreams.se/?s=ocarina&post_type=product",
       "match": "^(?=.*o[ck]arin)(?=.*(zelda|hori|nintendo))(?=.*(electric|elektrisk|playable|spelbar|instrument|hori\\b|NSX-261))",
-      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured"
+      "ignore": "amiibo|lego|cover art|foil|pussel|puzzle|textured|hologra|sleutelhanger|schl\\S*sselanh|keyring|key ?chain|key ?holder|porte-cl|llavero|portachiavi|porta-chaves|shirt|mug|tasse|poster|plush|pl[üu]sch|figur|statue|sticker|badge|wallet|bag\\b"
     },
     {
       "store": "Nintendo DE",
-      "product": "Zelda 40th",
+      "product": "Controller",
       "url": "https://store.nintendo.com/de-de/search?q=zelda%2040",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
       "ignore": "amiibo|powera|\\bpins?\\b|lego"
     },
     {
       "store": "Nintendo NL",
-      "product": "Zelda 40th",
+      "product": "Controller",
       "url": "https://store.nintendo.com/nl-nl/search?q=zelda%2040",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
       "ignore": "amiibo|powera|\\bpins?\\b|lego"
     },
     {
       "store": "Nintendo BE",
-      "product": "Zelda 40th",
+      "product": "Controller",
       "url": "https://store.nintendo.com/fr-be/search?q=zelda%2040",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
       "ignore": "amiibo|powera|\\bpins?\\b|lego"
     },
     {
       "store": "Nintendo AT",
-      "product": "Zelda 40th",
+      "product": "Controller",
       "url": "https://store.nintendo.com/de-at/search?q=zelda%2040",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
       "ignore": "amiibo|powera|\\bpins?\\b|lego"
     },
     {
       "store": "Nintendo FR",
-      "product": "Zelda 40th",
+      "product": "Controller",
       "url": "https://store.nintendo.com/fr-fr/search?q=zelda%2040",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
       "ignore": "amiibo|powera|\\bpins?\\b|lego"
     },
     {
       "store": "Nintendo IE",
-      "product": "Zelda 40th",
+      "product": "Controller",
       "url": "https://store.nintendo.com/en-ie/search?q=zelda%2040",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
       "ignore": "amiibo|powera|\\bpins?\\b|lego"
     },
     {
       "store": "Nintendo IT",
-      "product": "Zelda 40th",
+      "product": "Controller",
       "url": "https://store.nintendo.com/it-it/search?q=zelda%2040",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
       "ignore": "amiibo|powera|\\bpins?\\b|lego"
     },
     {
       "store": "Nintendo ES",
-      "product": "Zelda 40th",
+      "product": "Controller",
       "url": "https://store.nintendo.com/es-es/search?q=zelda%2040",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
       "ignore": "amiibo|powera|\\bpins?\\b|lego"
     },
     {
       "store": "Nintendo PT",
-      "product": "Zelda 40th",
+      "product": "Controller",
       "url": "https://store.nintendo.com/pt-pt/search?q=zelda%2040",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando|tasche|etui|pochette|custodia|funda|bolsa|\\bcase\\b))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
-      "ignore": "amiibo|powera|\\bpins?\\b|lego"
-    },
-    {
-      "store": "Webhallen",
-      "product": "Zelda 40th",
-      "url": "https://www.webhallen.com/se/search?searchString=zelda%2040th",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
-      "ignore": "amiibo|powera|\\bpins?\\b|lego"
-    },
-    {
-      "store": "Power",
-      "product": "Zelda 40th",
-      "url": "https://www.power.se/search/?q=zelda",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
-      "ignore": "amiibo|powera|\\bpins?\\b|lego"
-    },
-    {
-      "store": "Arcade Dreams",
-      "product": "Zelda 40th",
-      "url": "https://arcadedreams.se/?s=zelda+40th&post_type=product",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
-      "ignore": "amiibo|powera|\\bpins?\\b|lego"
-    },
-    {
-      "store": "GameShop",
-      "product": "Zelda 40th",
-      "url": "https://gameshop.se/?s=zelda+40th&post_type=product",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
-      "ignore": "amiibo|powera|\\bpins?\\b|lego"
-    },
-    {
-      "store": "Retrospelbutiken",
-      "product": "Zelda 40th",
-      "url": "https://www.retrospelbutiken.se/store/search.php?s=zelda+40th",
-      "keep_query": true,
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
-      "ignore": "amiibo|powera|\\bpins?\\b|lego"
-    },
-    {
-      "store": "Spel & Sånt",
-      "product": "Zelda 40th",
-      "type": "sitemap",
-      "every_seconds": 600,
-      "url": "https://www.spelochsant.se/__sitemap__/sv-sv.xml",
-      "match": "^(?=.*zelda)(?=.*40)(?=.*(pro[- ]?controller|kontroll|carrying[- ]case|fodral|väska|\\bcase\\b))",
+      "match": "^(?=.*zelda)(?=.*40)(?=.*(controller|manette|mando|comando))(?=.*-(\\d{10,}|[PB]\\d{5})\\b)",
       "ignore": "amiibo|powera|\\bpins?\\b|lego"
     }
   ],

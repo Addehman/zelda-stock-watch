@@ -188,7 +188,8 @@ async def check_webhallen(page, item):
     r = await page.request.get(f"https://www.webhallen.com/api/product/{pid}")
     d = (await r.json())["product"]
     st, price = d.get("stock", {}), float(d["price"]["price"])
-    if (st.get("web") or 0) > 0 or st.get("isTrue"):
+    # only real web stock counts: "isTrue" is also set when the item is "Tillfälligt fullbokad" (not orderable)
+    if (st.get("web") or 0) > 0:
         bad = price_check(item, price)
         return ("OVERPRICED", bad) if bad else ("IN_STOCK", f"web stock {st.get('web')} @ {price:g}")
     return "OUT", f"web stock 0 @ {price:g}"
